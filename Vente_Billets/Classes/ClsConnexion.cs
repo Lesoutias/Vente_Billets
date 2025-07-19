@@ -8,6 +8,6 @@ namespace Vente_Billets.Classes
 {
     class ClsConnexion
     {
-        public static string waybd = "data source = METRE\\SQLEXPRESS; initial catalog = venteBilletBd; integrate security = True; encrypt = false;";
+        public static string waybd = "data source = METRE\\SQLEXPRESS; initial catalog = venteBilletBd; integrated security = True; encrypt = false;";
     }
 }
