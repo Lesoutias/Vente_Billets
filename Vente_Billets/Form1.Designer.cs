@@ -59,8 +59,10 @@ namespace Vente_Billets
             this.label6 = new System.Windows.Forms.Label();
             this.BtnAjoutClient = new Guna.UI2.WinForms.Guna2Button();
             this.panelClient = new System.Windows.Forms.Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelAgents = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtIdAgents = new Guna.UI2.WinForms.Guna2TextBox();
             this.id = new System.Windows.Forms.Label();
             this.BtnDeleteAgent = new Guna.UI2.WinForms.Guna2Button();
@@ -80,8 +82,6 @@ namespace Vente_Billets
             this.txtNomAgent = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -90,10 +90,10 @@ namespace Vente_Billets
             ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NudAge)).BeginInit();
             this.panelClient.SuspendLayout();
-            this.panelAgents.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAgents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.panelAgents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgents)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Button1
@@ -105,7 +105,7 @@ namespace Vente_Billets
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(34, 14);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(77, 29);
             this.guna2Button1.TabIndex = 0;
@@ -119,7 +119,7 @@ namespace Vente_Billets
             this.panel1.Controls.Add(this.btnAgent);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Location = new System.Drawing.Point(-7, 123);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(501, 61);
             this.panel1.TabIndex = 1;
@@ -134,7 +134,7 @@ namespace Vente_Billets
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Location = new System.Drawing.Point(202, 14);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(77, 29);
             this.guna2Button2.TabIndex = 2;
@@ -150,7 +150,7 @@ namespace Vente_Billets
             this.btnAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAgent.ForeColor = System.Drawing.Color.White;
             this.btnAgent.Location = new System.Drawing.Point(371, 14);
-            this.btnAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgent.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgent.Name = "btnAgent";
             this.btnAgent.Size = new System.Drawing.Size(77, 29);
             this.btnAgent.TabIndex = 1;
@@ -234,7 +234,7 @@ namespace Vente_Billets
             this.BtnDeleteClient.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnDeleteClient.ForeColor = System.Drawing.Color.White;
             this.BtnDeleteClient.Location = new System.Drawing.Point(585, 361);
-            this.BtnDeleteClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnDeleteClient.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDeleteClient.Name = "BtnDeleteClient";
             this.BtnDeleteClient.Size = new System.Drawing.Size(120, 29);
             this.BtnDeleteClient.TabIndex = 31;
@@ -250,7 +250,7 @@ namespace Vente_Billets
             this.BtnUpdateClient.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnUpdateClient.ForeColor = System.Drawing.Color.White;
             this.BtnUpdateClient.Location = new System.Drawing.Point(387, 361);
-            this.BtnUpdateClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnUpdateClient.Margin = new System.Windows.Forms.Padding(2);
             this.BtnUpdateClient.Name = "BtnUpdateClient";
             this.BtnUpdateClient.Size = new System.Drawing.Size(120, 29);
             this.BtnUpdateClient.TabIndex = 30;
@@ -281,7 +281,7 @@ namespace Vente_Billets
             this.dgvClient.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClient.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvClient.Location = new System.Drawing.Point(146, 189);
-            this.dgvClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvClient.Margin = new System.Windows.Forms.Padding(2);
             this.dgvClient.Name = "dgvClient";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -394,7 +394,7 @@ namespace Vente_Billets
             this.cmbGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbGenre.ItemHeight = 30;
             this.cmbGenre.Location = new System.Drawing.Point(645, 140);
-            this.cmbGenre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbGenre.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGenre.Name = "cmbGenre";
             this.cmbGenre.Size = new System.Drawing.Size(185, 36);
             this.cmbGenre.TabIndex = 38;
@@ -418,7 +418,7 @@ namespace Vente_Billets
             this.BtnAjoutClient.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAjoutClient.ForeColor = System.Drawing.Color.White;
             this.BtnAjoutClient.Location = new System.Drawing.Point(196, 361);
-            this.BtnAjoutClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAjoutClient.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAjoutClient.Name = "BtnAjoutClient";
             this.BtnAjoutClient.Size = new System.Drawing.Size(120, 29);
             this.BtnAjoutClient.TabIndex = 40;
@@ -449,11 +449,22 @@ namespace Vente_Billets
             this.panelClient.Controls.Add(this.txtContact);
             this.panelClient.Controls.Add(this.txtAdress);
             this.panelClient.Location = new System.Drawing.Point(11, 198);
-            this.panelClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelClient.Margin = new System.Windows.Forms.Padding(2);
             this.panelClient.Name = "panelClient";
-            this.panelClient.Size = new System.Drawing.Size(1027, 408);
+            this.panelClient.Size = new System.Drawing.Size(1335, 408);
             this.panelClient.TabIndex = 41;
             this.panelClient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Vente_Billets.Properties.Resources.client;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(893, 70);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(409, 295);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 62;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // label5
             // 
@@ -496,11 +507,22 @@ namespace Vente_Billets
             this.panelAgents.Controls.Add(this.label8);
             this.panelAgents.Controls.Add(this.label7);
             this.panelAgents.Location = new System.Drawing.Point(15, 188);
-            this.panelAgents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelAgents.Margin = new System.Windows.Forms.Padding(2);
             this.panelAgents.Name = "panelAgents";
-            this.panelAgents.Size = new System.Drawing.Size(1006, 426);
+            this.panelAgents.Size = new System.Drawing.Size(1314, 426);
             this.panelAgents.TabIndex = 42;
             this.panelAgents.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAgents_Paint);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Vente_Billets.Properties.Resources.agent;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(876, 84);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(409, 295);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 61;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // txtIdAgents
             // 
@@ -539,7 +561,7 @@ namespace Vente_Billets
             this.BtnDeleteAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnDeleteAgent.ForeColor = System.Drawing.Color.White;
             this.BtnDeleteAgent.Location = new System.Drawing.Point(593, 383);
-            this.BtnDeleteAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnDeleteAgent.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDeleteAgent.Name = "BtnDeleteAgent";
             this.BtnDeleteAgent.Size = new System.Drawing.Size(120, 29);
             this.BtnDeleteAgent.TabIndex = 58;
@@ -555,7 +577,7 @@ namespace Vente_Billets
             this.btnUpdateAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdateAgent.ForeColor = System.Drawing.Color.White;
             this.btnUpdateAgent.Location = new System.Drawing.Point(381, 383);
-            this.btnUpdateAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateAgent.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateAgent.Name = "btnUpdateAgent";
             this.btnUpdateAgent.Size = new System.Drawing.Size(120, 29);
             this.btnUpdateAgent.TabIndex = 57;
@@ -571,7 +593,7 @@ namespace Vente_Billets
             this.BtnAjouterAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAjouterAgent.ForeColor = System.Drawing.Color.White;
             this.BtnAjouterAgent.Location = new System.Drawing.Point(175, 383);
-            this.BtnAjouterAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAjouterAgent.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAjouterAgent.Name = "BtnAjouterAgent";
             this.BtnAjouterAgent.Size = new System.Drawing.Size(120, 29);
             this.BtnAjouterAgent.TabIndex = 56;
@@ -602,7 +624,7 @@ namespace Vente_Billets
             this.dgvAgents.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvAgents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAgents.Location = new System.Drawing.Point(87, 233);
-            this.dgvAgents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAgents.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAgents.Name = "dgvAgents";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
@@ -651,7 +673,7 @@ namespace Vente_Billets
             this.cmbSalleAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbSalleAgent.ItemHeight = 30;
             this.cmbSalleAgent.Location = new System.Drawing.Point(703, 146);
-            this.cmbSalleAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbSalleAgent.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSalleAgent.Name = "cmbSalleAgent";
             this.cmbSalleAgent.Size = new System.Drawing.Size(168, 36);
             this.cmbSalleAgent.TabIndex = 54;
@@ -819,28 +841,6 @@ namespace Vente_Billets
             this.label7.TabIndex = 42;
             this.label7.Text = "ENREGISTREMENT DES AGENTS";
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::Vente_Billets.Properties.Resources.client;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(893, 70);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(409, 295);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 62;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Vente_Billets.Properties.Resources.agent;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(876, 84);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(409, 295);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 61;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
@@ -854,7 +854,7 @@ namespace Vente_Billets
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(901, 3);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1209, 3);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox3.TabIndex = 50;
@@ -866,7 +866,7 @@ namespace Vente_Billets
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(850, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1158, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 49;
@@ -877,7 +877,7 @@ namespace Vente_Billets
             this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(952, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1260, 3);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 48;
@@ -887,7 +887,7 @@ namespace Vente_Billets
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(999, 487);
+            this.ClientSize = new System.Drawing.Size(1307, 668);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
@@ -905,11 +905,11 @@ namespace Vente_Billets
             ((System.ComponentModel.ISupportInitialize)(this.NudAge)).EndInit();
             this.panelClient.ResumeLayout(false);
             this.panelClient.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.panelAgents.ResumeLayout(false);
             this.panelAgents.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAgents)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgents)).EndInit();
             this.ResumeLayout(false);
 
         }

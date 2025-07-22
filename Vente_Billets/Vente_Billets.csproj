@@ -56,7 +56,9 @@
     <Compile Include="Classes\ClsClients.cs" />
     <Compile Include="Classes\ClsConnexion.cs" />
     <Compile Include="Classes\ClsDict.cs" />
+    <Compile Include="Classes\ClsPlace.cs" />
     <Compile Include="Classes\ClsSalle.cs" />
+    <Compile Include="Classes\ClsSpectacle.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

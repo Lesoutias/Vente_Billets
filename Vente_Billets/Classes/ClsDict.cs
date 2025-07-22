@@ -99,6 +99,39 @@ namespace Vente_Billets.Classes
             }
         }
 
+        public void SaveUpdateSpectacle(ClsSpectacle spect)
+        {
+            string query = @"EXEC SaveOrUpdateSpectacle @id, @titre, @dateSpectacle, @nombreBillet, @duree, @descriptionSpectacle, @refSalle";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", spect.Id);
+                cmd.Parameters.AddWithValue("@titre", spect.Titre);
+                cmd.Parameters.AddWithValue("@dateSpectacle", spect.DateSpectacle);
+                cmd.Parameters.AddWithValue("@nombreBillet", spect.NombreBillet);
+                cmd.Parameters.AddWithValue("@duree", spect.Duree);
+                cmd.Parameters.AddWithValue("@descriptionSpectacle", spect.DescSpect);
+                cmd.Parameters.AddWithValue("@refSalle", spect.RefSalle);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void SaveUpdatePlace(ClsPlace pl)
+        {
+            string query = @"EXEC SaveOrUpdatePlace @id, @typePlace, @numero, @refSalle";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", pl.Id);
+                cmd.Parameters.AddWithValue("@typePlace", pl.TypePlace);
+                cmd.Parameters.AddWithValue("@numero", pl.NumPlace);
+                cmd.Parameters.AddWithValue("@refSalle", pl.RefSalle);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         public DataTable loadData(string nomTable)
         {
             if (!con.State.ToString().ToLower().Equals("open")) con.Open();

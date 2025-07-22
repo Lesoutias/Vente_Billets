@@ -36,18 +36,18 @@ namespace Vente_Billets.Formulaires
             this.BtnDeleteAgent = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdateAgent = new Guna.UI2.WinForms.Guna2Button();
             this.BtnAjouterAgent = new Guna.UI2.WinForms.Guna2Button();
-            this.txtIdSalle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdPlace = new Guna.UI2.WinForms.Guna2TextBox();
             this.id = new System.Windows.Forms.Label();
-            this.dgvSalle = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtAdresse = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvPlace = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txtNumPlace = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtNomSalle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTypePlace = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cmbSalleAgent = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbSallePlace = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +65,7 @@ namespace Vente_Billets.Formulaires
             this.BtnDeleteAgent.Size = new System.Drawing.Size(120, 29);
             this.BtnDeleteAgent.TabIndex = 92;
             this.BtnDeleteAgent.Text = "Delete";
+            this.BtnDeleteAgent.Click += new System.EventHandler(this.BtnDeleteAgent_Click);
             // 
             // btnUpdateAgent
             // 
@@ -80,6 +81,7 @@ namespace Vente_Billets.Formulaires
             this.btnUpdateAgent.Size = new System.Drawing.Size(120, 29);
             this.btnUpdateAgent.TabIndex = 91;
             this.btnUpdateAgent.Text = "Update";
+            this.btnUpdateAgent.Click += new System.EventHandler(this.btnUpdateAgent_Click);
             // 
             // BtnAjouterAgent
             // 
@@ -95,24 +97,25 @@ namespace Vente_Billets.Formulaires
             this.BtnAjouterAgent.Size = new System.Drawing.Size(120, 29);
             this.BtnAjouterAgent.TabIndex = 90;
             this.BtnAjouterAgent.Text = "Ajouter";
+            this.BtnAjouterAgent.Click += new System.EventHandler(this.BtnAjouterAgent_Click);
             // 
-            // txtIdSalle
+            // txtIdPlace
             // 
-            this.txtIdSalle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdSalle.DefaultText = "";
-            this.txtIdSalle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdSalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdSalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdSalle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdSalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdSalle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdSalle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdSalle.Location = new System.Drawing.Point(77, 176);
-            this.txtIdSalle.Name = "txtIdSalle";
-            this.txtIdSalle.PlaceholderText = "";
-            this.txtIdSalle.SelectedText = "";
-            this.txtIdSalle.Size = new System.Drawing.Size(167, 25);
-            this.txtIdSalle.TabIndex = 89;
+            this.txtIdPlace.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdPlace.DefaultText = "";
+            this.txtIdPlace.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdPlace.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdPlace.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdPlace.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdPlace.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdPlace.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdPlace.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdPlace.Location = new System.Drawing.Point(77, 176);
+            this.txtIdPlace.Name = "txtIdPlace";
+            this.txtIdPlace.PlaceholderText = "";
+            this.txtIdPlace.SelectedText = "";
+            this.txtIdPlace.Size = new System.Drawing.Size(167, 25);
+            this.txtIdPlace.TabIndex = 89;
             // 
             // id
             // 
@@ -124,10 +127,10 @@ namespace Vente_Billets.Formulaires
             this.id.TabIndex = 88;
             this.id.Text = "id";
             // 
-            // dgvSalle
+            // dgvPlace
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvSalle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPlace.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,9 +138,9 @@ namespace Vente_Billets.Formulaires
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSalle.ColumnHeadersHeight = 4;
-            this.dgvSalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvPlace.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPlace.ColumnHeadersHeight = 4;
+            this.dgvPlace.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,11 +148,11 @@ namespace Vente_Billets.Formulaires
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSalle.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSalle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSalle.Location = new System.Drawing.Point(67, 219);
-            this.dgvSalle.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvSalle.Name = "dgvSalle";
+            this.dgvPlace.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvPlace.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvPlace.Location = new System.Drawing.Point(67, 219);
+            this.dgvPlace.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPlace.Name = "dgvPlace";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,51 +160,52 @@ namespace Vente_Billets.Formulaires
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSalle.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvSalle.RowHeadersVisible = false;
-            this.dgvSalle.RowHeadersWidth = 62;
-            this.dgvSalle.RowTemplate.Height = 28;
-            this.dgvSalle.Size = new System.Drawing.Size(739, 148);
-            this.dgvSalle.TabIndex = 87;
-            this.dgvSalle.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvSalle.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvSalle.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvSalle.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvSalle.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvSalle.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvSalle.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSalle.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvSalle.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvSalle.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvSalle.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvSalle.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvSalle.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvSalle.ThemeStyle.ReadOnly = false;
-            this.dgvSalle.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvSalle.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvSalle.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvSalle.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvSalle.ThemeStyle.RowsStyle.Height = 28;
-            this.dgvSalle.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSalle.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvPlace.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvPlace.RowHeadersVisible = false;
+            this.dgvPlace.RowHeadersWidth = 62;
+            this.dgvPlace.RowTemplate.Height = 28;
+            this.dgvPlace.Size = new System.Drawing.Size(739, 148);
+            this.dgvPlace.TabIndex = 87;
+            this.dgvPlace.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPlace.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvPlace.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvPlace.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvPlace.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvPlace.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPlace.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvPlace.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvPlace.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvPlace.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPlace.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvPlace.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvPlace.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvPlace.ThemeStyle.ReadOnly = false;
+            this.dgvPlace.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPlace.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvPlace.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPlace.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvPlace.ThemeStyle.RowsStyle.Height = 28;
+            this.dgvPlace.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvPlace.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvPlace.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlace_CellContentClick);
             // 
-            // txtAdresse
+            // txtNumPlace
             // 
-            this.txtAdresse.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAdresse.DefaultText = "";
-            this.txtAdresse.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAdresse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAdresse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAdresse.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAdresse.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAdresse.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAdresse.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAdresse.Location = new System.Drawing.Point(76, 133);
-            this.txtAdresse.Name = "txtAdresse";
-            this.txtAdresse.PlaceholderText = "";
-            this.txtAdresse.SelectedText = "";
-            this.txtAdresse.Size = new System.Drawing.Size(167, 25);
-            this.txtAdresse.TabIndex = 86;
+            this.txtNumPlace.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNumPlace.DefaultText = "";
+            this.txtNumPlace.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNumPlace.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNumPlace.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNumPlace.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNumPlace.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNumPlace.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNumPlace.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNumPlace.Location = new System.Drawing.Point(76, 133);
+            this.txtNumPlace.Name = "txtNumPlace";
+            this.txtNumPlace.PlaceholderText = "";
+            this.txtNumPlace.SelectedText = "";
+            this.txtNumPlace.Size = new System.Drawing.Size(167, 25);
+            this.txtNumPlace.TabIndex = 86;
             // 
             // label13
             // 
@@ -213,23 +217,23 @@ namespace Vente_Billets.Formulaires
             this.label13.TabIndex = 85;
             this.label13.Text = "Numero";
             // 
-            // txtNomSalle
+            // txtTypePlace
             // 
-            this.txtNomSalle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNomSalle.DefaultText = "";
-            this.txtNomSalle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNomSalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNomSalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNomSalle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNomSalle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomSalle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNomSalle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNomSalle.Location = new System.Drawing.Point(76, 97);
-            this.txtNomSalle.Name = "txtNomSalle";
-            this.txtNomSalle.PlaceholderText = "";
-            this.txtNomSalle.SelectedText = "";
-            this.txtNomSalle.Size = new System.Drawing.Size(167, 25);
-            this.txtNomSalle.TabIndex = 82;
+            this.txtTypePlace.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTypePlace.DefaultText = "";
+            this.txtTypePlace.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTypePlace.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTypePlace.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTypePlace.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTypePlace.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTypePlace.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTypePlace.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTypePlace.Location = new System.Drawing.Point(76, 97);
+            this.txtTypePlace.Name = "txtTypePlace";
+            this.txtTypePlace.PlaceholderText = "";
+            this.txtTypePlace.SelectedText = "";
+            this.txtTypePlace.Size = new System.Drawing.Size(167, 25);
+            this.txtTypePlace.TabIndex = 82;
             // 
             // label8
             // 
@@ -254,21 +258,21 @@ namespace Vente_Billets.Formulaires
             this.label7.TabIndex = 80;
             this.label7.Text = "ENREGISTREMENT DES PLACES";
             // 
-            // cmbSalleAgent
+            // cmbSallePlace
             // 
-            this.cmbSalleAgent.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSalleAgent.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSalleAgent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSalleAgent.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSalleAgent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSalleAgent.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbSalleAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbSalleAgent.ItemHeight = 30;
-            this.cmbSalleAgent.Location = new System.Drawing.Point(368, 97);
-            this.cmbSalleAgent.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbSalleAgent.Name = "cmbSalleAgent";
-            this.cmbSalleAgent.Size = new System.Drawing.Size(168, 36);
-            this.cmbSalleAgent.TabIndex = 94;
+            this.cmbSallePlace.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSallePlace.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSallePlace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSallePlace.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSallePlace.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSallePlace.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbSallePlace.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSallePlace.ItemHeight = 30;
+            this.cmbSallePlace.Location = new System.Drawing.Point(368, 97);
+            this.cmbSallePlace.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbSallePlace.Name = "cmbSallePlace";
+            this.cmbSallePlace.Size = new System.Drawing.Size(168, 36);
+            this.cmbSallePlace.TabIndex = 94;
             // 
             // label11
             // 
@@ -298,22 +302,23 @@ namespace Vente_Billets.Formulaires
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1078, 450);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.cmbSalleAgent);
+            this.Controls.Add(this.cmbSallePlace);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.BtnDeleteAgent);
             this.Controls.Add(this.btnUpdateAgent);
             this.Controls.Add(this.BtnAjouterAgent);
-            this.Controls.Add(this.txtIdSalle);
+            this.Controls.Add(this.txtIdPlace);
             this.Controls.Add(this.id);
-            this.Controls.Add(this.dgvSalle);
-            this.Controls.Add(this.txtAdresse);
+            this.Controls.Add(this.dgvPlace);
+            this.Controls.Add(this.txtNumPlace);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtNomSalle);
+            this.Controls.Add(this.txtTypePlace);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Name = "FrmPlace";
             this.Text = "FrmPlace";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSalle)).EndInit();
+            this.Load += new System.EventHandler(this.FrmPlace_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -325,15 +330,15 @@ namespace Vente_Billets.Formulaires
         private Guna.UI2.WinForms.Guna2Button BtnDeleteAgent;
         private Guna.UI2.WinForms.Guna2Button btnUpdateAgent;
         private Guna.UI2.WinForms.Guna2Button BtnAjouterAgent;
-        private Guna.UI2.WinForms.Guna2TextBox txtIdSalle;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdPlace;
         private System.Windows.Forms.Label id;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvSalle;
-        private Guna.UI2.WinForms.Guna2TextBox txtAdresse;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvPlace;
+        private Guna.UI2.WinForms.Guna2TextBox txtNumPlace;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2TextBox txtNomSalle;
+        private Guna.UI2.WinForms.Guna2TextBox txtTypePlace;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbSalleAgent;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbSallePlace;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
