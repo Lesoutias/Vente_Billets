@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vente_Billets.Formulaires;
 
 namespace Vente_Billets
 {
@@ -16,7 +17,7 @@ namespace Vente_Billets
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmSalle());
         }
     }
 }

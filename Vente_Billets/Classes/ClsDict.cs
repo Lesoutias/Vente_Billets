@@ -84,6 +84,21 @@ namespace Vente_Billets.Classes
             }
         }
 
+        public void SaveUpdateSalle(ClsSalle sa)
+        {
+            string query = @"EXEC SaveOrUpdateSalle @id, @nomSalle, @adresse, @nombrePlace";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", sa.Id);
+                cmd.Parameters.AddWithValue("@nomSalle", sa.NomSalle);
+                cmd.Parameters.AddWithValue("@adresse", sa.Adesse);
+                cmd.Parameters.AddWithValue("@nombrePlace", sa.NombrePlace);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         public DataTable loadData(string nomTable)
         {
             if (!con.State.ToString().ToLower().Equals("open")) con.Open();

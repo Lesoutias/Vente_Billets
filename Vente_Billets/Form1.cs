@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vente_Billets.Classes;
-using Vente_Billets.Formulaires;
+//using Vente_Billets.Formulaires;
 
 namespace Vente_Billets
 {
@@ -28,36 +28,16 @@ namespace Vente_Billets
             {
                 panelClient.Visible = false;
                 panelAgents.Visible = false;
-                ChargementClient();
-                ChargementAgent();
+                AppliquerBordure(panelAgents, Color.Black, 2);
+                AppliquerBordure(panelClient, Color.Black, 2);
+                AppliquerBordure(panel1, Color.Black, 2);
+                ClsClients.ChargementClient(dgvClient,txtId,lblId,cmbGenre);
+                ClsAgents.ChargementAgent(dgvAgents,txtIdAgents,id,cmbSalleAgent);
             }
             else
             {
                 MessageBox.Show("Echec");
             }   
-        }
-
-        private void ChargementClient()
-        {
-            dgvClient.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvClient.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            dgvClient.GridColor = Color.Gray;
-            dgvClient.DataSource = ClsDict.Instance.loadData("tClients");
-            txtId.Visible = false;
-            lblId.Visible = false;
-            string[] genre = { "Feminin", "Masculin" };
-            cmbGenre.Items.AddRange(genre);
-        }
-
-        private void ChargementAgent()
-        {
-            dgvAgents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvAgents.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            dgvAgents.GridColor = Color.Gray;
-            dgvAgents.DataSource = ClsDict.Instance.loadData("tAgents");
-            txtIdAgents.Visible = false;
-            id.Visible = false;
-            ClsDict.Instance.loadCombo("tSalle", "nomSalle", cmbSalleAgent);
         }
 
         private void CleanTextClient()
@@ -151,8 +131,10 @@ namespace Vente_Billets
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
+
+
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
@@ -223,6 +205,44 @@ namespace Vente_Billets
         {
             panelAgents.Visible = true;
             panelClient.Visible = false;
+        }
+
+        private void panelAgents_Paint(object sender, PaintEventArgs e)
+        {
+            //Panel panel = sender as Panel;
+            //Color borderColor = Color.Black; // Choisis ta couleur
+            //int borderWidth = 2; // Épaisseur de la bordure
+
+            //ControlPaint.DrawBorder(e.Graphics, panel.ClientRectangle,
+            //                        borderColor, borderWidth, ButtonBorderStyle.Solid,
+            //                        borderColor, borderWidth, ButtonBorderStyle.Solid,
+            //                        borderColor, borderWidth, ButtonBorderStyle.Solid,
+            //                        borderColor, borderWidth, ButtonBorderStyle.Solid);
+        }
+
+        public void AppliquerBordure(Panel panel, Color couleur, int epaisseur)
+        {
+            panel.Paint += (s, e) =>
+            {
+                ControlPaint.DrawBorder(e.Graphics, panel.ClientRectangle,
+                                        couleur, epaisseur, ButtonBorderStyle.Solid,
+                                        couleur, epaisseur, ButtonBorderStyle.Solid,
+                                        couleur, epaisseur, ButtonBorderStyle.Solid,
+                                        couleur, epaisseur, ButtonBorderStyle.Solid);
+            };
+
+            // Pour forcer le redessin immédiat si nécessaire
+            panel.Invalidate();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
