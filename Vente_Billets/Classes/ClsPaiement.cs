@@ -27,10 +27,15 @@ namespace Vente_Billets.Classes
 
         public static void ChargementPaiement(DataGridView dgv, Guna2TextBox txtId, Label lblId,ComboBox cmb)
         {
+            dgv.ColumnHeadersVisible = true;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgv.GridColor = Color.Gray;
-            dgv.DataSource = ClsDict.Instance.loadData("tPaiement");
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(100, 88, 255); // ou une autre couleur
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgv.DataSource = ClsDict.Instance.loadData("Affichez_Paiement");
             string[] modePaiement = { "Cash", "Check", "Mobile Money" };
             cmb.Items.AddRange(modePaiement);
             txtId.Visible = false;

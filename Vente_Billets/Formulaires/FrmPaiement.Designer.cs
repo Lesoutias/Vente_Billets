@@ -29,17 +29,12 @@ namespace Vente_Billets.Formulaires
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DatePaie = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.BtnDeleteAgent = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdateAgent = new Guna.UI2.WinForms.Guna2Button();
             this.BtnAjouterAgent = new Guna.UI2.WinForms.Guna2Button();
             this.txtIdPaiement = new Guna.UI2.WinForms.Guna2TextBox();
             this.id = new System.Windows.Forms.Label();
-            this.dgvPaiement = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtMontant = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,8 +46,11 @@ namespace Vente_Billets.Formulaires
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cmbClient = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPaiement)).BeginInit();
+            this.dgvPaiement = new System.Windows.Forms.DataGridView();
+            this.txtRecherche = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPaiement)).BeginInit();
             this.SuspendLayout();
             // 
             // DatePaie
@@ -62,11 +60,11 @@ namespace Vente_Billets.Formulaires
             this.DatePaie.FillColor = System.Drawing.Color.White;
             this.DatePaie.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DatePaie.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DatePaie.Location = new System.Drawing.Point(104, 133);
+            this.DatePaie.Location = new System.Drawing.Point(103, 222);
             this.DatePaie.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DatePaie.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DatePaie.Name = "DatePaie";
-            this.DatePaie.Size = new System.Drawing.Size(179, 26);
+            this.DatePaie.Size = new System.Drawing.Size(179, 37);
             this.DatePaie.TabIndex = 104;
             this.DatePaie.Value = new System.DateTime(2025, 7, 21, 4, 51, 15, 315);
             // 
@@ -78,7 +76,7 @@ namespace Vente_Billets.Formulaires
             this.BtnDeleteAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BtnDeleteAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnDeleteAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnDeleteAgent.Location = new System.Drawing.Point(581, 391);
+            this.BtnDeleteAgent.Location = new System.Drawing.Point(558, 758);
             this.BtnDeleteAgent.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDeleteAgent.Name = "BtnDeleteAgent";
             this.BtnDeleteAgent.Size = new System.Drawing.Size(120, 29);
@@ -94,7 +92,7 @@ namespace Vente_Billets.Formulaires
             this.btnUpdateAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUpdateAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdateAgent.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateAgent.Location = new System.Drawing.Point(369, 391);
+            this.btnUpdateAgent.Location = new System.Drawing.Point(329, 758);
             this.btnUpdateAgent.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateAgent.Name = "btnUpdateAgent";
             this.btnUpdateAgent.Size = new System.Drawing.Size(120, 29);
@@ -110,7 +108,7 @@ namespace Vente_Billets.Formulaires
             this.BtnAjouterAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BtnAjouterAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAjouterAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnAjouterAgent.Location = new System.Drawing.Point(163, 391);
+            this.BtnAjouterAgent.Location = new System.Drawing.Point(123, 758);
             this.BtnAjouterAgent.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAjouterAgent.Name = "BtnAjouterAgent";
             this.BtnAjouterAgent.Size = new System.Drawing.Size(120, 29);
@@ -129,102 +127,42 @@ namespace Vente_Billets.Formulaires
             this.txtIdPaiement.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdPaiement.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdPaiement.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdPaiement.Location = new System.Drawing.Point(105, 177);
+            this.txtIdPaiement.Location = new System.Drawing.Point(104, 309);
             this.txtIdPaiement.Name = "txtIdPaiement";
             this.txtIdPaiement.PlaceholderText = "";
             this.txtIdPaiement.SelectedText = "";
             this.txtIdPaiement.Size = new System.Drawing.Size(178, 25);
             this.txtIdPaiement.TabIndex = 100;
+            this.txtIdPaiement.TextChanged += new System.EventHandler(this.txtIdPaiement_TextChanged);
             // 
             // id
             // 
             this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(10, 189);
+            this.id.Location = new System.Drawing.Point(10, 321);
             this.id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(21, 20);
+            this.id.Size = new System.Drawing.Size(15, 13);
             this.id.TabIndex = 99;
             this.id.Text = "id";
-            // 
-            // dgvPaiement
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvPaiement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaiement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPaiement.ColumnHeadersHeight = 4;
-            this.dgvPaiement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPaiement.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvPaiement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPaiement.Location = new System.Drawing.Point(86, 221);
-            this.dgvPaiement.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvPaiement.Name = "dgvPaiement";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPaiement.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvPaiement.RowHeadersVisible = false;
-            this.dgvPaiement.RowHeadersWidth = 62;
-            this.dgvPaiement.RowTemplate.Height = 28;
-            this.dgvPaiement.Size = new System.Drawing.Size(739, 148);
-            this.dgvPaiement.TabIndex = 98;
-            this.dgvPaiement.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvPaiement.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvPaiement.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvPaiement.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvPaiement.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvPaiement.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvPaiement.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPaiement.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvPaiement.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvPaiement.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPaiement.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvPaiement.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvPaiement.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvPaiement.ThemeStyle.ReadOnly = false;
-            this.dgvPaiement.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvPaiement.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvPaiement.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPaiement.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvPaiement.ThemeStyle.RowsStyle.Height = 28;
-            this.dgvPaiement.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPaiement.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvPaiement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPaiement_CellClick);
+            this.id.Click += new System.EventHandler(this.id_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(326, 145);
+            this.label12.Location = new System.Drawing.Point(325, 245);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 20);
+            this.label12.Size = new System.Drawing.Size(35, 13);
             this.label12.TabIndex = 94;
             this.label12.Text = "Agent";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 145);
+            this.label13.Location = new System.Drawing.Point(9, 245);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 20);
+            this.label13.Size = new System.Drawing.Size(30, 13);
             this.label13.TabIndex = 93;
             this.label13.Text = "Date";
             // 
@@ -239,7 +177,7 @@ namespace Vente_Billets.Formulaires
             this.txtMontant.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMontant.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMontant.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMontant.Location = new System.Drawing.Point(387, 97);
+            this.txtMontant.Location = new System.Drawing.Point(387, 155);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.PlaceholderText = "";
             this.txtMontant.SelectedText = "";
@@ -249,20 +187,20 @@ namespace Vente_Billets.Formulaires
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(315, 109);
+            this.label9.Location = new System.Drawing.Point(326, 167);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 20);
+            this.label9.Size = new System.Drawing.Size(46, 13);
             this.label9.TabIndex = 89;
             this.label9.Text = "Montant";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 110);
+            this.label8.Location = new System.Drawing.Point(11, 167);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 20);
+            this.label8.Size = new System.Drawing.Size(84, 13);
             this.label8.TabIndex = 87;
             this.label8.Text = "Mode_Paiement";
             // 
@@ -289,7 +227,7 @@ namespace Vente_Billets.Formulaires
             this.cmbModePaie.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbModePaie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbModePaie.ItemHeight = 30;
-            this.cmbModePaie.Location = new System.Drawing.Point(105, 87);
+            this.cmbModePaie.Location = new System.Drawing.Point(106, 144);
             this.cmbModePaie.Margin = new System.Windows.Forms.Padding(2);
             this.cmbModePaie.Name = "cmbModePaie";
             this.cmbModePaie.Size = new System.Drawing.Size(178, 36);
@@ -305,7 +243,7 @@ namespace Vente_Billets.Formulaires
             this.cmbAgent.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbAgent.ItemHeight = 30;
-            this.cmbAgent.Location = new System.Drawing.Point(386, 145);
+            this.cmbAgent.Location = new System.Drawing.Point(386, 222);
             this.cmbAgent.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAgent.Name = "cmbAgent";
             this.cmbAgent.Size = new System.Drawing.Size(168, 36);
@@ -315,9 +253,9 @@ namespace Vente_Billets.Formulaires
             // 
             this.guna2PictureBox1.Image = global::Vente_Billets.Properties.Resources.paiement;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(820, 40);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(916, 409);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(300, 380);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(300, 268);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 109;
             this.guna2PictureBox1.TabStop = false;
@@ -332,7 +270,7 @@ namespace Vente_Billets.Formulaires
             this.cmbClient.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbClient.ItemHeight = 30;
-            this.cmbClient.Location = new System.Drawing.Point(657, 93);
+            this.cmbClient.Location = new System.Drawing.Point(668, 151);
             this.cmbClient.Margin = new System.Windows.Forms.Padding(2);
             this.cmbClient.Name = "cmbClient";
             this.cmbClient.Size = new System.Drawing.Size(168, 36);
@@ -341,19 +279,75 @@ namespace Vente_Billets.Formulaires
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(593, 109);
+            this.label1.Location = new System.Drawing.Point(604, 167);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 111;
             this.label1.Text = "Client";
+            // 
+            // dgvPaiement
+            // 
+            this.dgvPaiement.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPaiement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPaiement.GridColor = System.Drawing.Color.White;
+            this.dgvPaiement.Location = new System.Drawing.Point(123, 467);
+            this.dgvPaiement.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPaiement.Name = "dgvPaiement";
+            this.dgvPaiement.RowHeadersWidth = 62;
+            this.dgvPaiement.RowTemplate.Height = 28;
+            this.dgvPaiement.Size = new System.Drawing.Size(760, 268);
+            this.dgvPaiement.TabIndex = 112;
+            this.dgvPaiement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPaiement_CellClick_1);
+            // 
+            // txtRecherche
+            // 
+            this.txtRecherche.BorderRadius = 20;
+            this.txtRecherche.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRecherche.DefaultText = "";
+            this.txtRecherche.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRecherche.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRecherche.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRecherche.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRecherche.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRecherche.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecherche.ForeColor = System.Drawing.Color.Black;
+            this.txtRecherche.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRecherche.Location = new System.Drawing.Point(123, 395);
+            this.txtRecherche.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRecherche.Name = "txtRecherche";
+            this.txtRecherche.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtRecherche.PlaceholderText = "Recherche";
+            this.txtRecherche.SelectedText = "";
+            this.txtRecherche.Size = new System.Drawing.Size(308, 29);
+            this.txtRecherche.TabIndex = 113;
+            this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(763, 758);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button1.TabIndex = 114;
+            this.guna2Button1.Text = "Recu";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // FrmPaiement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1132, 434);
+            this.ClientSize = new System.Drawing.Size(1363, 826);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.txtRecherche);
+            this.Controls.Add(this.dgvPaiement);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbClient);
             this.Controls.Add(this.guna2PictureBox1);
@@ -365,7 +359,6 @@ namespace Vente_Billets.Formulaires
             this.Controls.Add(this.BtnAjouterAgent);
             this.Controls.Add(this.txtIdPaiement);
             this.Controls.Add(this.id);
-            this.Controls.Add(this.dgvPaiement);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtMontant);
@@ -375,8 +368,8 @@ namespace Vente_Billets.Formulaires
             this.Name = "FrmPaiement";
             this.Text = "FrmPaiement";
             this.Load += new System.EventHandler(this.FrmPaiement_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPaiement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPaiement)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,7 +382,6 @@ namespace Vente_Billets.Formulaires
         private Guna.UI2.WinForms.Guna2Button BtnAjouterAgent;
         private Guna.UI2.WinForms.Guna2TextBox txtIdPaiement;
         private System.Windows.Forms.Label id;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvPaiement;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2TextBox txtMontant;
@@ -401,5 +393,8 @@ namespace Vente_Billets.Formulaires
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbClient;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvPaiement;
+        private Guna.UI2.WinForms.Guna2TextBox txtRecherche;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

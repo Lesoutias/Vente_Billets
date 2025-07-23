@@ -84,12 +84,69 @@ namespace Vente_Billets.Formulaires
 
         private void dgvFacture_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void dgvFacture_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbAgent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbPlace_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdfacture_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvFacture_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             DataGridViewRow row = dgvFacture.Rows[e.RowIndex];
 
             txtIdfacture.Text = row.Cells["id"].Value.ToString();
-            
-            
-           
             cmbPlace.Text = row.Cells["Type de Place"].Value.ToString();
             cmbAgent.Text = row.Cells["Agent"].Value.ToString();
             cmbClient.Text = row.Cells["Client"].Value.ToString();
@@ -97,6 +154,11 @@ namespace Vente_Billets.Formulaires
 
             txtIdfacture.Visible = true;
             id.Visible = true;
+        }
+
+        private void txtRecherche_TextChanged(object sender, EventArgs e)
+        {
+            dgvFacture.DataSource = ClsDict.Instance.Rechercher(txtRecherche.Text.Trim(), "Affichez_Facture", "Client");
         }
     }
 }

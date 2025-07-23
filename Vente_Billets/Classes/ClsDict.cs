@@ -212,6 +212,23 @@ namespace Vente_Billets.Classes
                 }
             }
         }
+
+        public DataTable Imprimez_Recu(string nom)
+        {
+            string query = @"SELECT * FROM Produire_Recu WHERE noms = @noms";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@noms", nom);
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
         public DataTable loadData(string nomTable)
         {
             if (!con.State.ToString().ToLower().Equals("open")) con.Open();
@@ -306,6 +323,20 @@ namespace Vente_Billets.Classes
             return nomAffiche;
         }
 
+        public DataTable Rechercher(string texte, string nomTable, string Champ)
+        {
+            if (con.State != ConnectionState.Open) con.Open();
+
+            SqlCommand cmd = new SqlCommand($"SELECT * FROM {nomTable} WHERE {Champ} LIKE @val", ClsDict.Instance.con);
+            cmd.Parameters.AddWithValue("@val", "%" + texte + "%");
+
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(table);
+
+            ClsDict.Instance.con.Close();
+            return table;
+        }
 
 
     }

@@ -17,8 +17,7 @@ namespace Vente_Billets.Formulaires
         {
             InitializeComponent();
 
-            LoadData();
-
+           
         }
 
         
@@ -27,21 +26,10 @@ namespace Vente_Billets.Formulaires
 
         }
 
-        public DataTable DataSourceTable { get; private set; }
-        private void LoadData()
-        {
-            DataSourceTable = ClsDict.Instance.loadData("Affichez_Agent");
-            dgvAgents.DataSource = DataSourceTable;
-        }
+      
+        
 
-        public void Filtrer(string recherche)
-        {
-            if (DataSourceTable != null)
-            {
-                DataView dv = DataSourceTable.DefaultView;
-                dv.RowFilter = $"nomAgent LIKE '%{recherche.Replace("'", "''")}%'"; // colonne à adapter
-            }
-        }
+       
 
         public DataGridView GetGrid() => dgvAgents;
 
@@ -81,18 +69,18 @@ namespace Vente_Billets.Formulaires
             {
                 ag.Id = 0;
                 ClsDict.Instance.SaveUpdateAgents(ag);
-                dgvAgents.DataSource = ClsDict.Instance.loadData("tAgents");
+                ClsAgents.ChargementAgent(dgvAgents, txtIdAgents, id, cmbSalleAgent);
             }
             else if (a == 2)
             {
                 ag.Id = int.Parse(txtIdAgents.Text);
                 ClsDict.Instance.SaveUpdateAgents(ag);
-                dgvAgents.DataSource = ClsDict.Instance.loadData("tAgents");
+                ClsAgents.ChargementAgent(dgvAgents, txtIdAgents, id, cmbSalleAgent);
             }
             else if (a == 3)
             {
                 ClsDict.Instance.Deletedata("tAgents", "id", int.Parse(txtIdAgents.Text));
-                dgvAgents.DataSource = ClsDict.Instance.loadData("tAgents");
+                ClsAgents.ChargementAgent(dgvAgents, txtIdAgents, id, cmbSalleAgent);
             }
         }
 
@@ -128,16 +116,26 @@ namespace Vente_Billets.Formulaires
         {
             DataGridViewRow row = dgvAgents.Rows[e.RowIndex];
 
-            txtIdAgents.Text = row.Cells["id"].Value.ToString(); // ID
-            txtNomAgent.Text = row.Cells["noms"].Value.ToString();
-            txtContactAgent.Text = row.Cells["contact"].Value.ToString();
-            txtFoctionAgent.Text = row.Cells["fonction"].Value.ToString();
-            txtUserNameAgent.Text = row.Cells["username"].Value.ToString();
-            txtPasswordAgents.Text = row.Cells["pwd"].Value.ToString();
-            cmbSalleAgent.Text = row.Cells["refSalle"].Value.ToString();
+            txtIdAgents.Text = row.Cells["numero"].Value.ToString(); // ID
+            txtNomAgent.Text = row.Cells["Noms"].Value.ToString();
+            txtContactAgent.Text = row.Cells["Telephone"].Value.ToString();
+            txtFoctionAgent.Text = row.Cells["Fonction"].Value.ToString();
+            txtUserNameAgent.Text = row.Cells["Username"].Value.ToString();
+            txtPasswordAgents.Text = row.Cells["Mot de Passe"].Value.ToString();
+            cmbSalleAgent.Text = row.Cells["Salle"].Value.ToString();
 
             txtIdAgents.Visible = true;
             id.Visible = true;
+        }
+
+        private void txtRecherche_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRecherche_TextChanged(object sender, EventArgs e)
+        {
+            dgvAgents.DataSource = ClsDict.Instance.Rechercher(txtRecherche.Text.Trim(), "Affichez_Agent", "Noms");
         }
     }
 }

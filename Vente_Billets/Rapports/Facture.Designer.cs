@@ -497,29 +497,302 @@ namespace Vente_Billets
             DevExpress.DataAccess.Sql.QueryParameter queryParameter144 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter145 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery33 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery21 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column125 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression125 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table21 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column126 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression126 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column127 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression127 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column128 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression128 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column129 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression129 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column130 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression130 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column131 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression131 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery22 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column132 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression132 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table22 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column133 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression133 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column134 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression134 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column135 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression135 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column136 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression136 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery23 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column137 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression137 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table23 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column138 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression138 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column139 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression139 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column140 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression140 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column141 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression141 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column142 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression142 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column143 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression143 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery24 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column144 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression144 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table24 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column145 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression145 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column146 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression146 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column147 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression147 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column148 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression148 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column149 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression149 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column150 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression150 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column151 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression151 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column152 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression152 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery25 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column153 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression153 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table25 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column154 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression154 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column155 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression155 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column156 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression156 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column157 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression157 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column158 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression158 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery26 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column159 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression159 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table26 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column160 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression160 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column161 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression161 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column162 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression162 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column163 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression163 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column164 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression164 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery27 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column165 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression165 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table27 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column166 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression166 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column167 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression167 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column168 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression168 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery28 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column169 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression169 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table28 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column170 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression170 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column171 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression171 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column172 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression172 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery29 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column173 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression173 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table29 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column174 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression174 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column175 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression175 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column176 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression176 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column177 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression177 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column178 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression178 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column179 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression179 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery30 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column180 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression180 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table30 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column181 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression181 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column182 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression182 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column183 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression183 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column184 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression184 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column185 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression185 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column186 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression186 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery31 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column187 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression187 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table31 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column188 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression188 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column189 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression189 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column190 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression190 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column191 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression191 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column192 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression192 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column193 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression193 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column194 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression194 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column195 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression195 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.SelectQuery selectQuery32 = new DevExpress.DataAccess.Sql.SelectQuery();
+            DevExpress.DataAccess.Sql.Column column196 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression196 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table32 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Column column197 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression197 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column198 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression198 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column199 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression199 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column200 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression200 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column201 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression201 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column202 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression202 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Column column203 = new DevExpress.DataAccess.Sql.Column();
+            DevExpress.DataAccess.Sql.ColumnExpression columnExpression203 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery34 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter146 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery35 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter147 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter148 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter149 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter150 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter151 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter152 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter153 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter154 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter155 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery36 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter156 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter157 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter158 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter159 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery37 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter160 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter161 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter162 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter163 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter164 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter165 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery38 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter166 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter167 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter168 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter169 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery39 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter170 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter171 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter172 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter173 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery40 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter174 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter175 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter176 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter177 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter178 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter179 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter180 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery41 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter181 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter182 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter183 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter184 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery42 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter185 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter186 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter187 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter188 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery43 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter189 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter190 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery44 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter191 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter192 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery45 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter193 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter194 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery46 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter195 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter196 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter197 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery47 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter198 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter199 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter200 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter201 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter202 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter203 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter204 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery48 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter205 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter206 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter207 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter208 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter209 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter210 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery49 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter211 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter212 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter213 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter214 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter215 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter216 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter217 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter218 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery50 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.sqlDataSource3 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -537,6 +810,103 @@ namespace Vente_Billets
             this.xrLabel13});
             this.TopMargin.HeightF = 210F;
             this.TopMargin.Name = "TopMargin";
+            // 
+            // xrLabel5
+            // 
+            this.xrLabel5.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(6.25F, 177F);
+            this.xrLabel5.Multiline = true;
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(56.94442F, 23F);
+            this.xrLabel5.StylePriority.UseFont = false;
+            this.xrLabel5.Text = "Date :";
+            // 
+            // xrLabel6
+            // 
+            this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Date du Jour]")});
+            this.xrLabel6.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(84.02778F, 177F);
+            this.xrLabel6.Multiline = true;
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(181.6944F, 23F);
+            this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.Text = "xrLabel2";
+            // 
+            // xrPictureBox2
+            // 
+            this.xrPictureBox2.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::Vente_Billets.Properties.Resources.logo2, true);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(265.7222F, 52.25003F);
+            this.xrPictureBox2.Name = "xrPictureBox2";
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(130.2778F, 147.75F);
+            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            // 
+            // xrLabel14
+            // 
+            this.xrLabel14.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(277.1666F, 9.999996F);
+            this.xrLabel14.Multiline = true;
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel14.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel14.StylePriority.UseFont = false;
+            this.xrLabel14.Text = "FACTURE";
+            // 
+            // xrPictureBox1
+            // 
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(425.4167F, 52.25003F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(214.5833F, 147.75F);
+            // 
+            // xrLabel3
+            // 
+            this.xrLabel3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(6.25F, 113.9445F);
+            this.xrLabel3.Multiline = true;
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(56.94442F, 23F);
+            this.xrLabel3.StylePriority.UseFont = false;
+            this.xrLabel3.Text = "Client :";
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Client]")});
+            this.xrLabel2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(84.02778F, 113.9445F);
+            this.xrLabel2.Multiline = true;
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(151.3889F, 23F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.Text = "xrLabel2";
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(6.25F, 52.25003F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(77.77778F, 23F);
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.Text = "Numero :";
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[id]")});
+            this.xrLabel4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(84.02778F, 52.25003F);
+            this.xrLabel4.Multiline = true;
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(108.3333F, 23F);
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.Text = "xrLabel2";
             // 
             // xrLabel13
             // 
@@ -567,6 +937,32 @@ namespace Vente_Billets
             this.xrLabel8});
             this.Detail.HeightF = 375.4167F;
             this.Detail.Name = "Detail";
+            // 
+            // xrLabel16
+            // 
+            this.xrLabel16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Titre du Spectacle]")});
+            this.xrLabel16.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(118.0556F, 191F);
+            this.xrLabel16.Multiline = true;
+            this.xrLabel16.Name = "xrLabel16";
+            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel16.SizeF = new System.Drawing.SizeF(168.4999F, 23F);
+            this.xrLabel16.StylePriority.UseForeColor = false;
+            this.xrLabel16.Text = "xrLabel16";
+            // 
+            // xrLabel15
+            // 
+            this.xrLabel15.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel15.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(79.16666F, 132.3611F);
+            this.xrLabel15.Multiline = true;
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(223.25F, 35.5F);
+            this.xrLabel15.StylePriority.UseFont = false;
+            this.xrLabel15.StylePriority.UseForeColor = false;
+            this.xrLabel15.Text = "ENJOY OUR SHOW";
             // 
             // xrLabel9
             // 
@@ -612,30 +1008,6 @@ namespace Vente_Billets
             this.xrLabel12.SizeF = new System.Drawing.SizeF(149.9167F, 23.00003F);
             this.xrLabel12.Text = "xrLabel2";
             // 
-            // xrLabel5
-            // 
-            this.xrLabel5.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(6.25F, 177F);
-            this.xrLabel5.Multiline = true;
-            this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(56.94442F, 23F);
-            this.xrLabel5.StylePriority.UseFont = false;
-            this.xrLabel5.Text = "Date :";
-            // 
-            // xrLabel6
-            // 
-            this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Date du Jour]")});
-            this.xrLabel6.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(84.02778F, 177F);
-            this.xrLabel6.Multiline = true;
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(181.6944F, 23F);
-            this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.Text = "xrLabel2";
-            // 
             // xrLabel7
             // 
             this.xrLabel7.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -659,54 +1031,6 @@ namespace Vente_Billets
             this.xrLabel8.SizeF = new System.Drawing.SizeF(168.75F, 23F);
             this.xrLabel8.StylePriority.UseFont = false;
             this.xrLabel8.Text = "xrLabel2";
-            // 
-            // xrLabel4
-            // 
-            this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[id]")});
-            this.xrLabel4.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(84.02778F, 52.25003F);
-            this.xrLabel4.Multiline = true;
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(108.3333F, 23F);
-            this.xrLabel4.StylePriority.UseFont = false;
-            this.xrLabel4.Text = "xrLabel2";
-            // 
-            // xrLabel3
-            // 
-            this.xrLabel3.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(6.25F, 113.9445F);
-            this.xrLabel3.Multiline = true;
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(56.94442F, 23F);
-            this.xrLabel3.StylePriority.UseFont = false;
-            this.xrLabel3.Text = "Client :";
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Client]")});
-            this.xrLabel2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(84.02778F, 113.9445F);
-            this.xrLabel2.Multiline = true;
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(151.3889F, 23F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.Text = "xrLabel2";
-            // 
-            // xrLabel1
-            // 
-            this.xrLabel1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(6.25F, 52.25003F);
-            this.xrLabel1.Multiline = true;
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(77.77778F, 23F);
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.Text = "Numero :";
             // 
             // sqlDataSource1
             // 
@@ -1917,56 +2241,689 @@ namespace Vente_Billets
             storedProcQuery33});
             this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
-            // xrPictureBox1
+            // sqlDataSource3
             // 
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(425.4167F, 52.25003F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(214.5833F, 147.75F);
-            // 
-            // xrLabel14
-            // 
-            this.xrLabel14.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(277.1666F, 9.999996F);
-            this.xrLabel14.Multiline = true;
-            this.xrLabel14.Name = "xrLabel14";
-            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel14.SizeF = new System.Drawing.SizeF(100F, 23F);
-            this.xrLabel14.StylePriority.UseFont = false;
-            this.xrLabel14.Text = "FACTURE";
-            // 
-            // xrLabel15
-            // 
-            this.xrLabel15.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel15.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(79.16666F, 132.3611F);
-            this.xrLabel15.Multiline = true;
-            this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(223.25F, 35.5F);
-            this.xrLabel15.StylePriority.UseFont = false;
-            this.xrLabel15.StylePriority.UseForeColor = false;
-            this.xrLabel15.Text = "ENJOY OUR SHOW";
-            // 
-            // xrLabel16
-            // 
-            this.xrLabel16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[titre]")});
-            this.xrLabel16.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(130.5556F, 182.6667F);
-            this.xrLabel16.Multiline = true;
-            this.xrLabel16.Name = "xrLabel16";
-            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel16.SizeF = new System.Drawing.SizeF(100F, 23F);
-            this.xrLabel16.StylePriority.UseForeColor = false;
-            this.xrLabel16.Text = "xrLabel16";
-            // 
-            // xrPictureBox2
-            // 
-            this.xrPictureBox2.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::Vente_Billets.Properties.Resources.logo2, true);
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(265.7222F, 52.25003F);
-            this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(130.2778F, 147.75F);
-            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            this.sqlDataSource3.ConnectionName = "localhost_venteBilletBd_Connection 2";
+            this.sqlDataSource3.Name = "sqlDataSource3";
+            columnExpression125.ColumnName = "id";
+            table21.Name = "Facture";
+            columnExpression125.Table = table21;
+            column125.Expression = columnExpression125;
+            columnExpression126.ColumnName = "refClient";
+            columnExpression126.Table = table21;
+            column126.Expression = columnExpression126;
+            columnExpression127.ColumnName = "refAgent";
+            columnExpression127.Table = table21;
+            column127.Expression = columnExpression127;
+            columnExpression128.ColumnName = "dateFacture";
+            columnExpression128.Table = table21;
+            column128.Expression = columnExpression128;
+            columnExpression129.ColumnName = "Nombre_Billet";
+            columnExpression129.Table = table21;
+            column129.Expression = columnExpression129;
+            columnExpression130.ColumnName = "Prix_Total";
+            columnExpression130.Table = table21;
+            column130.Expression = columnExpression130;
+            columnExpression131.ColumnName = "refPlace";
+            columnExpression131.Table = table21;
+            column131.Expression = columnExpression131;
+            selectQuery21.Columns.Add(column125);
+            selectQuery21.Columns.Add(column126);
+            selectQuery21.Columns.Add(column127);
+            selectQuery21.Columns.Add(column128);
+            selectQuery21.Columns.Add(column129);
+            selectQuery21.Columns.Add(column130);
+            selectQuery21.Columns.Add(column131);
+            selectQuery21.Name = "Facture";
+            selectQuery21.Tables.Add(table21);
+            columnExpression132.ColumnName = "name";
+            table22.Name = "sysdiagrams";
+            columnExpression132.Table = table22;
+            column132.Expression = columnExpression132;
+            columnExpression133.ColumnName = "principal_id";
+            columnExpression133.Table = table22;
+            column133.Expression = columnExpression133;
+            columnExpression134.ColumnName = "diagram_id";
+            columnExpression134.Table = table22;
+            column134.Expression = columnExpression134;
+            columnExpression135.ColumnName = "version";
+            columnExpression135.Table = table22;
+            column135.Expression = columnExpression135;
+            columnExpression136.ColumnName = "definition";
+            columnExpression136.Table = table22;
+            column136.Expression = columnExpression136;
+            selectQuery22.Columns.Add(column132);
+            selectQuery22.Columns.Add(column133);
+            selectQuery22.Columns.Add(column134);
+            selectQuery22.Columns.Add(column135);
+            selectQuery22.Columns.Add(column136);
+            selectQuery22.Name = "sysdiagrams";
+            selectQuery22.Tables.Add(table22);
+            columnExpression137.ColumnName = "id";
+            table23.Name = "tAgents";
+            columnExpression137.Table = table23;
+            column137.Expression = columnExpression137;
+            columnExpression138.ColumnName = "noms";
+            columnExpression138.Table = table23;
+            column138.Expression = columnExpression138;
+            columnExpression139.ColumnName = "contact";
+            columnExpression139.Table = table23;
+            column139.Expression = columnExpression139;
+            columnExpression140.ColumnName = "fonction";
+            columnExpression140.Table = table23;
+            column140.Expression = columnExpression140;
+            columnExpression141.ColumnName = "username";
+            columnExpression141.Table = table23;
+            column141.Expression = columnExpression141;
+            columnExpression142.ColumnName = "pwd";
+            columnExpression142.Table = table23;
+            column142.Expression = columnExpression142;
+            columnExpression143.ColumnName = "refSalle";
+            columnExpression143.Table = table23;
+            column143.Expression = columnExpression143;
+            selectQuery23.Columns.Add(column137);
+            selectQuery23.Columns.Add(column138);
+            selectQuery23.Columns.Add(column139);
+            selectQuery23.Columns.Add(column140);
+            selectQuery23.Columns.Add(column141);
+            selectQuery23.Columns.Add(column142);
+            selectQuery23.Columns.Add(column143);
+            selectQuery23.Name = "tAgents";
+            selectQuery23.Tables.Add(table23);
+            columnExpression144.ColumnName = "id";
+            table24.Name = "tBillet";
+            columnExpression144.Table = table24;
+            column144.Expression = columnExpression144;
+            columnExpression145.ColumnName = "prix";
+            columnExpression145.Table = table24;
+            column145.Expression = columnExpression145;
+            columnExpression146.ColumnName = "dateAchat";
+            columnExpression146.Table = table24;
+            column146.Expression = columnExpression146;
+            columnExpression147.ColumnName = "statut";
+            columnExpression147.Table = table24;
+            column147.Expression = columnExpression147;
+            columnExpression148.ColumnName = "refSpectacle";
+            columnExpression148.Table = table24;
+            column148.Expression = columnExpression148;
+            columnExpression149.ColumnName = "refPlace";
+            columnExpression149.Table = table24;
+            column149.Expression = columnExpression149;
+            columnExpression150.ColumnName = "refClient";
+            columnExpression150.Table = table24;
+            column150.Expression = columnExpression150;
+            columnExpression151.ColumnName = "refAgent";
+            columnExpression151.Table = table24;
+            column151.Expression = columnExpression151;
+            columnExpression152.ColumnName = "refFacture";
+            columnExpression152.Table = table24;
+            column152.Expression = columnExpression152;
+            selectQuery24.Columns.Add(column144);
+            selectQuery24.Columns.Add(column145);
+            selectQuery24.Columns.Add(column146);
+            selectQuery24.Columns.Add(column147);
+            selectQuery24.Columns.Add(column148);
+            selectQuery24.Columns.Add(column149);
+            selectQuery24.Columns.Add(column150);
+            selectQuery24.Columns.Add(column151);
+            selectQuery24.Columns.Add(column152);
+            selectQuery24.Name = "tBillet";
+            selectQuery24.Tables.Add(table24);
+            columnExpression153.ColumnName = "id";
+            table25.Name = "tClients";
+            columnExpression153.Table = table25;
+            column153.Expression = columnExpression153;
+            columnExpression154.ColumnName = "noms";
+            columnExpression154.Table = table25;
+            column154.Expression = columnExpression154;
+            columnExpression155.ColumnName = "adresse";
+            columnExpression155.Table = table25;
+            column155.Expression = columnExpression155;
+            columnExpression156.ColumnName = "contact";
+            columnExpression156.Table = table25;
+            column156.Expression = columnExpression156;
+            columnExpression157.ColumnName = "genre";
+            columnExpression157.Table = table25;
+            column157.Expression = columnExpression157;
+            columnExpression158.ColumnName = "age";
+            columnExpression158.Table = table25;
+            column158.Expression = columnExpression158;
+            selectQuery25.Columns.Add(column153);
+            selectQuery25.Columns.Add(column154);
+            selectQuery25.Columns.Add(column155);
+            selectQuery25.Columns.Add(column156);
+            selectQuery25.Columns.Add(column157);
+            selectQuery25.Columns.Add(column158);
+            selectQuery25.Name = "tClients";
+            selectQuery25.Tables.Add(table25);
+            columnExpression159.ColumnName = "id";
+            table26.Name = "tPaiement";
+            columnExpression159.Table = table26;
+            column159.Expression = columnExpression159;
+            columnExpression160.ColumnName = "datePaiement";
+            columnExpression160.Table = table26;
+            column160.Expression = columnExpression160;
+            columnExpression161.ColumnName = "modePaiment";
+            columnExpression161.Table = table26;
+            column161.Expression = columnExpression161;
+            columnExpression162.ColumnName = "montant";
+            columnExpression162.Table = table26;
+            column162.Expression = columnExpression162;
+            columnExpression163.ColumnName = "refAgent";
+            columnExpression163.Table = table26;
+            column163.Expression = columnExpression163;
+            columnExpression164.ColumnName = "refClient";
+            columnExpression164.Table = table26;
+            column164.Expression = columnExpression164;
+            selectQuery26.Columns.Add(column159);
+            selectQuery26.Columns.Add(column160);
+            selectQuery26.Columns.Add(column161);
+            selectQuery26.Columns.Add(column162);
+            selectQuery26.Columns.Add(column163);
+            selectQuery26.Columns.Add(column164);
+            selectQuery26.Name = "tPaiement";
+            selectQuery26.Tables.Add(table26);
+            columnExpression165.ColumnName = "id";
+            table27.Name = "tPlace";
+            columnExpression165.Table = table27;
+            column165.Expression = columnExpression165;
+            columnExpression166.ColumnName = "typePlace";
+            columnExpression166.Table = table27;
+            column166.Expression = columnExpression166;
+            columnExpression167.ColumnName = "numero";
+            columnExpression167.Table = table27;
+            column167.Expression = columnExpression167;
+            columnExpression168.ColumnName = "refSalle";
+            columnExpression168.Table = table27;
+            column168.Expression = columnExpression168;
+            selectQuery27.Columns.Add(column165);
+            selectQuery27.Columns.Add(column166);
+            selectQuery27.Columns.Add(column167);
+            selectQuery27.Columns.Add(column168);
+            selectQuery27.Name = "tPlace";
+            selectQuery27.Tables.Add(table27);
+            columnExpression169.ColumnName = "id";
+            table28.Name = "tSalle";
+            columnExpression169.Table = table28;
+            column169.Expression = columnExpression169;
+            columnExpression170.ColumnName = "nomSalle";
+            columnExpression170.Table = table28;
+            column170.Expression = columnExpression170;
+            columnExpression171.ColumnName = "adresse";
+            columnExpression171.Table = table28;
+            column171.Expression = columnExpression171;
+            columnExpression172.ColumnName = "nombrePlace";
+            columnExpression172.Table = table28;
+            column172.Expression = columnExpression172;
+            selectQuery28.Columns.Add(column169);
+            selectQuery28.Columns.Add(column170);
+            selectQuery28.Columns.Add(column171);
+            selectQuery28.Columns.Add(column172);
+            selectQuery28.Name = "tSalle";
+            selectQuery28.Tables.Add(table28);
+            columnExpression173.ColumnName = "id";
+            table29.Name = "tSpectacle";
+            columnExpression173.Table = table29;
+            column173.Expression = columnExpression173;
+            columnExpression174.ColumnName = "titre";
+            columnExpression174.Table = table29;
+            column174.Expression = columnExpression174;
+            columnExpression175.ColumnName = "dateSpectacle";
+            columnExpression175.Table = table29;
+            column175.Expression = columnExpression175;
+            columnExpression176.ColumnName = "nombreBillet";
+            columnExpression176.Table = table29;
+            column176.Expression = columnExpression176;
+            columnExpression177.ColumnName = "duree";
+            columnExpression177.Table = table29;
+            column177.Expression = columnExpression177;
+            columnExpression178.ColumnName = "descriptionSpectacle";
+            columnExpression178.Table = table29;
+            column178.Expression = columnExpression178;
+            columnExpression179.ColumnName = "refSalle";
+            columnExpression179.Table = table29;
+            column179.Expression = columnExpression179;
+            selectQuery29.Columns.Add(column173);
+            selectQuery29.Columns.Add(column174);
+            selectQuery29.Columns.Add(column175);
+            selectQuery29.Columns.Add(column176);
+            selectQuery29.Columns.Add(column177);
+            selectQuery29.Columns.Add(column178);
+            selectQuery29.Columns.Add(column179);
+            selectQuery29.Name = "tSpectacle";
+            selectQuery29.Tables.Add(table29);
+            columnExpression180.ColumnName = "numero";
+            table30.Name = "Affichez_Agent";
+            columnExpression180.Table = table30;
+            column180.Expression = columnExpression180;
+            columnExpression181.ColumnName = "Noms";
+            columnExpression181.Table = table30;
+            column181.Expression = columnExpression181;
+            columnExpression182.ColumnName = "Telephone";
+            columnExpression182.Table = table30;
+            column182.Expression = columnExpression182;
+            columnExpression183.ColumnName = "Fonction";
+            columnExpression183.Table = table30;
+            column183.Expression = columnExpression183;
+            columnExpression184.ColumnName = "Username";
+            columnExpression184.Table = table30;
+            column184.Expression = columnExpression184;
+            columnExpression185.ColumnName = "Mot de Passe";
+            columnExpression185.Table = table30;
+            column185.Expression = columnExpression185;
+            columnExpression186.ColumnName = "Salle";
+            columnExpression186.Table = table30;
+            column186.Expression = columnExpression186;
+            selectQuery30.Columns.Add(column180);
+            selectQuery30.Columns.Add(column181);
+            selectQuery30.Columns.Add(column182);
+            selectQuery30.Columns.Add(column183);
+            selectQuery30.Columns.Add(column184);
+            selectQuery30.Columns.Add(column185);
+            selectQuery30.Columns.Add(column186);
+            selectQuery30.Name = "Affichez_Agent";
+            selectQuery30.Tables.Add(table30);
+            columnExpression187.ColumnName = "id";
+            table31.Name = "Affichez_Billet";
+            columnExpression187.Table = table31;
+            column187.Expression = columnExpression187;
+            columnExpression188.ColumnName = "prix";
+            columnExpression188.Table = table31;
+            column188.Expression = columnExpression188;
+            columnExpression189.ColumnName = "dateAchat";
+            columnExpression189.Table = table31;
+            column189.Expression = columnExpression189;
+            columnExpression190.ColumnName = "statut";
+            columnExpression190.Table = table31;
+            column190.Expression = columnExpression190;
+            columnExpression191.ColumnName = "Spectacle";
+            columnExpression191.Table = table31;
+            column191.Expression = columnExpression191;
+            columnExpression192.ColumnName = "Type de Place";
+            columnExpression192.Table = table31;
+            column192.Expression = columnExpression192;
+            columnExpression193.ColumnName = "Client";
+            columnExpression193.Table = table31;
+            column193.Expression = columnExpression193;
+            columnExpression194.ColumnName = "Agent";
+            columnExpression194.Table = table31;
+            column194.Expression = columnExpression194;
+            columnExpression195.ColumnName = "Numero Facture";
+            columnExpression195.Table = table31;
+            column195.Expression = columnExpression195;
+            selectQuery31.Columns.Add(column187);
+            selectQuery31.Columns.Add(column188);
+            selectQuery31.Columns.Add(column189);
+            selectQuery31.Columns.Add(column190);
+            selectQuery31.Columns.Add(column191);
+            selectQuery31.Columns.Add(column192);
+            selectQuery31.Columns.Add(column193);
+            selectQuery31.Columns.Add(column194);
+            selectQuery31.Columns.Add(column195);
+            selectQuery31.Name = "Affichez_Billet";
+            selectQuery31.Tables.Add(table31);
+            columnExpression196.ColumnName = "id";
+            table32.Name = "Affichez_Facture";
+            columnExpression196.Table = table32;
+            column196.Expression = columnExpression196;
+            columnExpression197.ColumnName = "Client";
+            columnExpression197.Table = table32;
+            column197.Expression = columnExpression197;
+            columnExpression198.ColumnName = "Type de Place";
+            columnExpression198.Table = table32;
+            column198.Expression = columnExpression198;
+            columnExpression199.ColumnName = "Agent";
+            columnExpression199.Table = table32;
+            column199.Expression = columnExpression199;
+            columnExpression200.ColumnName = "Date du Jour";
+            columnExpression200.Table = table32;
+            column200.Expression = columnExpression200;
+            columnExpression201.ColumnName = "Billet Achete";
+            columnExpression201.Table = table32;
+            column201.Expression = columnExpression201;
+            columnExpression202.ColumnName = "Montant a payer";
+            columnExpression202.Table = table32;
+            column202.Expression = columnExpression202;
+            columnExpression203.ColumnName = "Titre du Spectacle";
+            columnExpression203.Table = table32;
+            column203.Expression = columnExpression203;
+            selectQuery32.Columns.Add(column196);
+            selectQuery32.Columns.Add(column197);
+            selectQuery32.Columns.Add(column198);
+            selectQuery32.Columns.Add(column199);
+            selectQuery32.Columns.Add(column200);
+            selectQuery32.Columns.Add(column201);
+            selectQuery32.Columns.Add(column202);
+            selectQuery32.Columns.Add(column203);
+            selectQuery32.Name = "Affichez_Facture";
+            selectQuery32.Tables.Add(table32);
+            storedProcQuery34.Name = "Production_Facture";
+            queryParameter146.Name = "@id";
+            queryParameter146.Type = typeof(int);
+            queryParameter146.ValueInfo = "0";
+            storedProcQuery34.Parameters.Add(queryParameter146);
+            storedProcQuery34.StoredProcName = "Production_Facture";
+            storedProcQuery35.Name = "SaveOrUpdateBillet";
+            queryParameter147.Name = "@id";
+            queryParameter147.Type = typeof(int);
+            queryParameter147.ValueInfo = "0";
+            queryParameter148.Name = "@prix";
+            queryParameter148.Type = typeof(decimal);
+            queryParameter148.ValueInfo = "0";
+            queryParameter149.Name = "@dateAchat";
+            queryParameter149.Type = typeof(System.DateTime);
+            queryParameter149.ValueInfo = "1753-01-01";
+            queryParameter150.Name = "@statut";
+            queryParameter150.Type = typeof(bool);
+            queryParameter150.ValueInfo = "False";
+            queryParameter151.Name = "@refSpectacle";
+            queryParameter151.Type = typeof(int);
+            queryParameter151.ValueInfo = "0";
+            queryParameter152.Name = "@refPlace";
+            queryParameter152.Type = typeof(int);
+            queryParameter152.ValueInfo = "0";
+            queryParameter153.Name = "@refClient";
+            queryParameter153.Type = typeof(int);
+            queryParameter153.ValueInfo = "0";
+            queryParameter154.Name = "@refAgent";
+            queryParameter154.Type = typeof(int);
+            queryParameter154.ValueInfo = "0";
+            queryParameter155.Name = "@refFacture";
+            queryParameter155.Type = typeof(int);
+            queryParameter155.ValueInfo = "0";
+            storedProcQuery35.Parameters.Add(queryParameter147);
+            storedProcQuery35.Parameters.Add(queryParameter148);
+            storedProcQuery35.Parameters.Add(queryParameter149);
+            storedProcQuery35.Parameters.Add(queryParameter150);
+            storedProcQuery35.Parameters.Add(queryParameter151);
+            storedProcQuery35.Parameters.Add(queryParameter152);
+            storedProcQuery35.Parameters.Add(queryParameter153);
+            storedProcQuery35.Parameters.Add(queryParameter154);
+            storedProcQuery35.Parameters.Add(queryParameter155);
+            storedProcQuery35.StoredProcName = "SaveOrUpdateBillet";
+            storedProcQuery36.Name = "SaveOrUpdateFacture";
+            queryParameter156.Name = "@id";
+            queryParameter156.Type = typeof(int);
+            queryParameter156.ValueInfo = "0";
+            queryParameter157.Name = "@refClient";
+            queryParameter157.Type = typeof(int);
+            queryParameter157.ValueInfo = "0";
+            queryParameter158.Name = "@refAgent";
+            queryParameter158.Type = typeof(int);
+            queryParameter158.ValueInfo = "0";
+            queryParameter159.Name = "@refPlace";
+            queryParameter159.Type = typeof(int);
+            queryParameter159.ValueInfo = "0";
+            storedProcQuery36.Parameters.Add(queryParameter156);
+            storedProcQuery36.Parameters.Add(queryParameter157);
+            storedProcQuery36.Parameters.Add(queryParameter158);
+            storedProcQuery36.Parameters.Add(queryParameter159);
+            storedProcQuery36.StoredProcName = "SaveOrUpdateFacture";
+            storedProcQuery37.Name = "SaveOrUpdatePaiement";
+            queryParameter160.Name = "@id";
+            queryParameter160.Type = typeof(int);
+            queryParameter160.ValueInfo = "0";
+            queryParameter161.Name = "@datePaiement";
+            queryParameter161.Type = typeof(System.DateTime);
+            queryParameter161.ValueInfo = "1753-01-01";
+            queryParameter162.Name = "@modePaiement";
+            queryParameter162.Type = typeof(string);
+            queryParameter163.Name = "@montant";
+            queryParameter163.Type = typeof(decimal);
+            queryParameter163.ValueInfo = "0";
+            queryParameter164.Name = "@refAgent";
+            queryParameter164.Type = typeof(int);
+            queryParameter164.ValueInfo = "0";
+            queryParameter165.Name = "@refClient";
+            queryParameter165.Type = typeof(int);
+            queryParameter165.ValueInfo = "0";
+            storedProcQuery37.Parameters.Add(queryParameter160);
+            storedProcQuery37.Parameters.Add(queryParameter161);
+            storedProcQuery37.Parameters.Add(queryParameter162);
+            storedProcQuery37.Parameters.Add(queryParameter163);
+            storedProcQuery37.Parameters.Add(queryParameter164);
+            storedProcQuery37.Parameters.Add(queryParameter165);
+            storedProcQuery37.StoredProcName = "SaveOrUpdatePaiement";
+            storedProcQuery38.Name = "SaveOrUpdatePlace";
+            queryParameter166.Name = "@id";
+            queryParameter166.Type = typeof(int);
+            queryParameter166.ValueInfo = "0";
+            queryParameter167.Name = "@typePlace";
+            queryParameter167.Type = typeof(string);
+            queryParameter168.Name = "@numero";
+            queryParameter168.Type = typeof(string);
+            queryParameter169.Name = "@refSalle";
+            queryParameter169.Type = typeof(int);
+            queryParameter169.ValueInfo = "0";
+            storedProcQuery38.Parameters.Add(queryParameter166);
+            storedProcQuery38.Parameters.Add(queryParameter167);
+            storedProcQuery38.Parameters.Add(queryParameter168);
+            storedProcQuery38.Parameters.Add(queryParameter169);
+            storedProcQuery38.StoredProcName = "SaveOrUpdatePlace";
+            storedProcQuery39.Name = "SaveOrUpdateSalle";
+            queryParameter170.Name = "@id";
+            queryParameter170.Type = typeof(int);
+            queryParameter170.ValueInfo = "0";
+            queryParameter171.Name = "@nomSalle";
+            queryParameter171.Type = typeof(string);
+            queryParameter172.Name = "@adresse";
+            queryParameter172.Type = typeof(string);
+            queryParameter173.Name = "@nombrePlace";
+            queryParameter173.Type = typeof(int);
+            queryParameter173.ValueInfo = "0";
+            storedProcQuery39.Parameters.Add(queryParameter170);
+            storedProcQuery39.Parameters.Add(queryParameter171);
+            storedProcQuery39.Parameters.Add(queryParameter172);
+            storedProcQuery39.Parameters.Add(queryParameter173);
+            storedProcQuery39.StoredProcName = "SaveOrUpdateSalle";
+            storedProcQuery40.Name = "SaveOrUpdateSpectacle";
+            queryParameter174.Name = "@id";
+            queryParameter174.Type = typeof(int);
+            queryParameter174.ValueInfo = "0";
+            queryParameter175.Name = "@titre";
+            queryParameter175.Type = typeof(string);
+            queryParameter176.Name = "@dateSpectacle";
+            queryParameter176.Type = typeof(System.DateTime);
+            queryParameter176.ValueInfo = "1753-01-01";
+            queryParameter177.Name = "@nombreBillet";
+            queryParameter177.Type = typeof(int);
+            queryParameter177.ValueInfo = "0";
+            queryParameter178.Name = "@duree";
+            queryParameter178.Type = typeof(string);
+            queryParameter179.Name = "@descriptionSpectacle";
+            queryParameter179.Type = typeof(string);
+            queryParameter180.Name = "@refSalle";
+            queryParameter180.Type = typeof(int);
+            queryParameter180.ValueInfo = "0";
+            storedProcQuery40.Parameters.Add(queryParameter174);
+            storedProcQuery40.Parameters.Add(queryParameter175);
+            storedProcQuery40.Parameters.Add(queryParameter176);
+            storedProcQuery40.Parameters.Add(queryParameter177);
+            storedProcQuery40.Parameters.Add(queryParameter178);
+            storedProcQuery40.Parameters.Add(queryParameter179);
+            storedProcQuery40.Parameters.Add(queryParameter180);
+            storedProcQuery40.StoredProcName = "SaveOrUpdateSpectacle";
+            storedProcQuery41.Name = "sp_alterdiagram";
+            queryParameter181.Name = "@diagramname";
+            queryParameter181.Type = typeof(string);
+            queryParameter182.Name = "@owner_id";
+            queryParameter182.Type = typeof(int);
+            queryParameter182.ValueInfo = "0";
+            queryParameter183.Name = "@version";
+            queryParameter183.Type = typeof(int);
+            queryParameter183.ValueInfo = "0";
+            queryParameter184.Name = "@definition";
+            queryParameter184.Type = typeof(byte[]);
+            storedProcQuery41.Parameters.Add(queryParameter181);
+            storedProcQuery41.Parameters.Add(queryParameter182);
+            storedProcQuery41.Parameters.Add(queryParameter183);
+            storedProcQuery41.Parameters.Add(queryParameter184);
+            storedProcQuery41.StoredProcName = "sp_alterdiagram";
+            storedProcQuery42.Name = "sp_creatediagram";
+            queryParameter185.Name = "@diagramname";
+            queryParameter185.Type = typeof(string);
+            queryParameter186.Name = "@owner_id";
+            queryParameter186.Type = typeof(int);
+            queryParameter186.ValueInfo = "0";
+            queryParameter187.Name = "@version";
+            queryParameter187.Type = typeof(int);
+            queryParameter187.ValueInfo = "0";
+            queryParameter188.Name = "@definition";
+            queryParameter188.Type = typeof(byte[]);
+            storedProcQuery42.Parameters.Add(queryParameter185);
+            storedProcQuery42.Parameters.Add(queryParameter186);
+            storedProcQuery42.Parameters.Add(queryParameter187);
+            storedProcQuery42.Parameters.Add(queryParameter188);
+            storedProcQuery42.StoredProcName = "sp_creatediagram";
+            storedProcQuery43.Name = "sp_dropdiagram";
+            queryParameter189.Name = "@diagramname";
+            queryParameter189.Type = typeof(string);
+            queryParameter190.Name = "@owner_id";
+            queryParameter190.Type = typeof(int);
+            queryParameter190.ValueInfo = "0";
+            storedProcQuery43.Parameters.Add(queryParameter189);
+            storedProcQuery43.Parameters.Add(queryParameter190);
+            storedProcQuery43.StoredProcName = "sp_dropdiagram";
+            storedProcQuery44.Name = "sp_helpdiagramdefinition";
+            queryParameter191.Name = "@diagramname";
+            queryParameter191.Type = typeof(string);
+            queryParameter192.Name = "@owner_id";
+            queryParameter192.Type = typeof(int);
+            queryParameter192.ValueInfo = "0";
+            storedProcQuery44.Parameters.Add(queryParameter191);
+            storedProcQuery44.Parameters.Add(queryParameter192);
+            storedProcQuery44.StoredProcName = "sp_helpdiagramdefinition";
+            storedProcQuery45.Name = "sp_helpdiagrams";
+            queryParameter193.Name = "@diagramname";
+            queryParameter193.Type = typeof(string);
+            queryParameter194.Name = "@owner_id";
+            queryParameter194.Type = typeof(int);
+            queryParameter194.ValueInfo = "0";
+            storedProcQuery45.Parameters.Add(queryParameter193);
+            storedProcQuery45.Parameters.Add(queryParameter194);
+            storedProcQuery45.StoredProcName = "sp_helpdiagrams";
+            storedProcQuery46.Name = "sp_renamediagram";
+            queryParameter195.Name = "@diagramname";
+            queryParameter195.Type = typeof(string);
+            queryParameter196.Name = "@owner_id";
+            queryParameter196.Type = typeof(int);
+            queryParameter196.ValueInfo = "0";
+            queryParameter197.Name = "@new_diagramname";
+            queryParameter197.Type = typeof(string);
+            storedProcQuery46.Parameters.Add(queryParameter195);
+            storedProcQuery46.Parameters.Add(queryParameter196);
+            storedProcQuery46.Parameters.Add(queryParameter197);
+            storedProcQuery46.StoredProcName = "sp_renamediagram";
+            storedProcQuery47.Name = "sp_SaveOrUpdateAgent_Flexible";
+            queryParameter198.Name = "@id";
+            queryParameter198.Type = typeof(int);
+            queryParameter198.ValueInfo = "0";
+            queryParameter199.Name = "@noms";
+            queryParameter199.Type = typeof(string);
+            queryParameter200.Name = "@contact";
+            queryParameter200.Type = typeof(string);
+            queryParameter201.Name = "@fonction";
+            queryParameter201.Type = typeof(string);
+            queryParameter202.Name = "@username";
+            queryParameter202.Type = typeof(string);
+            queryParameter203.Name = "@pwd";
+            queryParameter203.Type = typeof(string);
+            queryParameter204.Name = "@refSalle";
+            queryParameter204.Type = typeof(int);
+            queryParameter204.ValueInfo = "0";
+            storedProcQuery47.Parameters.Add(queryParameter198);
+            storedProcQuery47.Parameters.Add(queryParameter199);
+            storedProcQuery47.Parameters.Add(queryParameter200);
+            storedProcQuery47.Parameters.Add(queryParameter201);
+            storedProcQuery47.Parameters.Add(queryParameter202);
+            storedProcQuery47.Parameters.Add(queryParameter203);
+            storedProcQuery47.Parameters.Add(queryParameter204);
+            storedProcQuery47.StoredProcName = "sp_SaveOrUpdateAgent_Flexible";
+            storedProcQuery48.Name = "sp_SaveOrUpdateClient_Flexible";
+            queryParameter205.Name = "@id";
+            queryParameter205.Type = typeof(int);
+            queryParameter205.ValueInfo = "0";
+            queryParameter206.Name = "@noms";
+            queryParameter206.Type = typeof(string);
+            queryParameter207.Name = "@adresse";
+            queryParameter207.Type = typeof(string);
+            queryParameter208.Name = "@contact";
+            queryParameter208.Type = typeof(string);
+            queryParameter209.Name = "@genre";
+            queryParameter209.Type = typeof(string);
+            queryParameter210.Name = "@age";
+            queryParameter210.Type = typeof(int);
+            queryParameter210.ValueInfo = "0";
+            storedProcQuery48.Parameters.Add(queryParameter205);
+            storedProcQuery48.Parameters.Add(queryParameter206);
+            storedProcQuery48.Parameters.Add(queryParameter207);
+            storedProcQuery48.Parameters.Add(queryParameter208);
+            storedProcQuery48.Parameters.Add(queryParameter209);
+            storedProcQuery48.Parameters.Add(queryParameter210);
+            storedProcQuery48.StoredProcName = "sp_SaveOrUpdateClient_Flexible";
+            storedProcQuery49.Name = "sp_SaveOrUpdateSpectacle_Flexible";
+            queryParameter211.Name = "@id";
+            queryParameter211.Type = typeof(int);
+            queryParameter211.ValueInfo = "0";
+            queryParameter212.Name = "@titre";
+            queryParameter212.Type = typeof(string);
+            queryParameter213.Name = "@dateSpectacle";
+            queryParameter213.Type = typeof(System.DateTime);
+            queryParameter213.ValueInfo = "1753-01-01";
+            queryParameter214.Name = "@nombreBillet";
+            queryParameter214.Type = typeof(int);
+            queryParameter214.ValueInfo = "0";
+            queryParameter215.Name = "@duree";
+            queryParameter215.Type = typeof(string);
+            queryParameter216.Name = "@affiche";
+            queryParameter216.Type = typeof(string);
+            queryParameter217.Name = "@descriptionSpectacle";
+            queryParameter217.Type = typeof(string);
+            queryParameter218.Name = "@refSalle";
+            queryParameter218.Type = typeof(int);
+            queryParameter218.ValueInfo = "0";
+            storedProcQuery49.Parameters.Add(queryParameter211);
+            storedProcQuery49.Parameters.Add(queryParameter212);
+            storedProcQuery49.Parameters.Add(queryParameter213);
+            storedProcQuery49.Parameters.Add(queryParameter214);
+            storedProcQuery49.Parameters.Add(queryParameter215);
+            storedProcQuery49.Parameters.Add(queryParameter216);
+            storedProcQuery49.Parameters.Add(queryParameter217);
+            storedProcQuery49.Parameters.Add(queryParameter218);
+            storedProcQuery49.StoredProcName = "sp_SaveOrUpdateSpectacle_Flexible";
+            storedProcQuery50.Name = "sp_upgraddiagrams";
+            storedProcQuery50.StoredProcName = "sp_upgraddiagrams";
+            this.sqlDataSource3.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            selectQuery21,
+            selectQuery22,
+            selectQuery23,
+            selectQuery24,
+            selectQuery25,
+            selectQuery26,
+            selectQuery27,
+            selectQuery28,
+            selectQuery29,
+            selectQuery30,
+            selectQuery31,
+            selectQuery32,
+            storedProcQuery34,
+            storedProcQuery35,
+            storedProcQuery36,
+            storedProcQuery37,
+            storedProcQuery38,
+            storedProcQuery39,
+            storedProcQuery40,
+            storedProcQuery41,
+            storedProcQuery42,
+            storedProcQuery43,
+            storedProcQuery44,
+            storedProcQuery45,
+            storedProcQuery46,
+            storedProcQuery47,
+            storedProcQuery48,
+            storedProcQuery49,
+            storedProcQuery50});
+            this.sqlDataSource3.ResultSchemaSerializable = resources.GetString("sqlDataSource3.ResultSchemaSerializable");
             // 
             // Facture
             // 
@@ -1976,9 +2933,10 @@ namespace Vente_Billets
             this.Detail});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1,
-            this.sqlDataSource2});
+            this.sqlDataSource2,
+            this.sqlDataSource3});
             this.DataMember = "Affichez_Facture";
-            this.DataSource = this.sqlDataSource2;
+            this.DataSource = this.sqlDataSource3;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Margins = new System.Drawing.Printing.Margins(4, 3, 210, 0);
             this.PageHeight = 583;
@@ -2014,5 +2972,6 @@ namespace Vente_Billets
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource3;
     }
 }

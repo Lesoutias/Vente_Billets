@@ -75,6 +75,22 @@ namespace Vente_Billets.Formulaires
 
         private void dgvClient_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void CleanTextClient()
+        {
+            txtAdress.Text = "";
+            txtContact.Text = "";
+            cmbGenre.Text = "";
+            txtNom.Text = "";
+            NudAge.Value = 0;
+            txtId.Visible = false;
+            lblId.Visible = false;
+        }
+
+        private void dgvClient_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             DataGridViewRow row = dgvClient.Rows[e.RowIndex];
 
             txtId.Text = row.Cells["id"].Value.ToString(); // ID
@@ -88,15 +104,10 @@ namespace Vente_Billets.Formulaires
             lblId.Visible = true;
         }
 
-        private void CleanTextClient()
+        private void txtRecherche_TextChanged(object sender, EventArgs e)
         {
-            txtAdress.Text = "";
-            txtContact.Text = "";
-            cmbGenre.Text = "";
-            txtNom.Text = "";
-            NudAge.Value = 0;
-            txtId.Visible = false;
-            lblId.Visible = false;
+            
+            dgvClient.DataSource = ClsDict.Instance.Rechercher(txtRecherche.Text.Trim(), "tClients", "noms");
         }
     }
 }

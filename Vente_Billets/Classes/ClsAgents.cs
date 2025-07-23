@@ -1,6 +1,8 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -42,5 +44,6 @@ namespace Vente_Billets.Classes
             lblId.Visible = false;
             ClsDict.Instance.loadCombo("tSalle", "nomSalle", cmb);
         }
+
     }
 }

@@ -157,10 +157,7 @@ namespace Vente_Billets.Formulaires
 
         private void txtRecherche_TextChanged(object sender, EventArgs e)
         {
-            if (formulaireActif is FrmAgent frmAgent)
-            {
-                frmAgent.Filtrer(txtRecherche.Text);
-            }
+            
         }
     }
 }

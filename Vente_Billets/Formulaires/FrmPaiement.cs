@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vente_Billets.Classes;
+using Vente_Billets.Rapports;
 
 namespace Vente_Billets.Formulaires
 {
@@ -74,17 +76,44 @@ namespace Vente_Billets.Formulaires
 
         private void dgvPaiement_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void txtIdPaiement_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRecherche_TextChanged(object sender, EventArgs e)
+        {
+            dgvPaiement.DataSource = ClsDict.Instance.Rechercher(txtRecherche.Text.Trim(), "Affichez_Paiement", "Client");
+        }
+
+        private void dgvPaiement_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             DataGridViewRow row = dgvPaiement.Rows[e.RowIndex];
 
-            txtIdPaiement.Text = row.Cells["id"].Value.ToString(); // ID
-            DatePaie.Text = row.Cells["datePaiement"].Value.ToString();
-            cmbModePaie.Text = row.Cells["modePaiment"].Value.ToString();
-            txtMontant.Text = row.Cells["montant"].Value.ToString();
-            cmbAgent.Text = row.Cells["refAgent"].Value.ToString();
-            cmbClient.SelectedValue = row.Cells["refClient"].Value;
+            txtIdPaiement.Text = row.Cells["Numero Paiement"].Value.ToString(); // ID
+            DatePaie.Text = row.Cells["Date de Paiement"].Value.ToString();
+            cmbModePaie.Text = row.Cells["Mode de Paiement"].Value.ToString();
+            txtMontant.Text = row.Cells["Montant a Payer"].Value.ToString();
+            cmbAgent.Text = row.Cells["Agent"].Value.ToString();
+            cmbClient.Text = row.Cells["Client"].Value.ToString();
 
             txtIdPaiement.Visible = true;
             id.Visible = true;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Recu recu = new Recu(cmbClient.Text);
+            ReportPrintTool tool = new ReportPrintTool(recu);
+            tool.ShowPreviewDialog();
         }
     }
 }

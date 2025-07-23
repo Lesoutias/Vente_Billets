@@ -69,43 +69,110 @@ namespace Vente_Billets.Formulaires
         private void BtnAjouterAgent_Click(object sender, EventArgs e)
         {
             InsertUpdateBillet(1);
+            CleanTextBillet();
         }
 
         private void btnUpdateAgent_Click(object sender, EventArgs e)
         {
             InsertUpdateBillet(2);
+            CleanTextBillet();
         }
 
         private void BtnDeleteAgent_Click(object sender, EventArgs e)
         {
             InsertUpdateBillet(3);
+            CleanTextBillet();
+
         }
 
         private void dgvBillet_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void txtIdBillet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateAchat_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbPlace_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbAgent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbFacture_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRecherche_TextChanged(object sender, EventArgs e)
+        {
+            dgvBillet.DataSource = ClsDict.Instance.Rechercher(txtRecherche.Text.Trim(), "Affichez_Billet", "Client");
+        }
+
+        private void dgvBillet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgvBillet_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dgvBillet.Rows[e.RowIndex];
 
             txtIdBillet.Text = row.Cells["id"].Value.ToString(); // ID
             DateAchat.Text = row.Cells["dateAchat"].Value.ToString();
             txtPrix.Text = row.Cells["prix"].Value.ToString();
-            string idSpectacle = row.Cells["refSpectacle"].Value.ToString();
-            string idPlace= row.Cells["refPlace"].Value.ToString();
-            string idAgent = row.Cells["refAgent"].Value.ToString();
-            string idClient = row.Cells["refClient"].Value.ToString();
-            string idFacture = row.Cells["refFacture"].Value.ToString();
-            cmbSpectacle.Text = ClsDict.Instance.GetNomDepuisId("tSpectacle", "id", "titre", idSpectacle);
-            cmbPlace.Text = ClsDict.Instance.GetNomDepuisId("tPlace", "id", "typePlace", idPlace);
-            cmbAgent.Text = ClsDict.Instance.GetNomDepuisId("tAgents", "id", "noms", idAgent);
-            cmbClient.Text = ClsDict.Instance.GetNomDepuisId("tClients", "id", "noms", idClient);
-            cmbFacture.Text = ClsDict.Instance.GetNomDepuisId("Facture", "id", "id", idFacture);
+            cmbSpectacle.Text = row.Cells["Spectacle"].Value.ToString();
+            cmbPlace.Text = row.Cells["Type de Place"].Value.ToString();
+            cmbAgent.Text = row.Cells["Agent"].Value.ToString();
+            cmbClient.Text = row.Cells["Client"].Value.ToString();
+            cmbFacture.Text = row.Cells["Numero Facture"].Value.ToString();
 
             txtIdBillet.Visible = true;
             id.Visible = true;
         }
 
-        private void txtIdBillet_TextChanged(object sender, EventArgs e)
+        private void CleanTextBillet()
         {
-
+            txtPrix.Text = "";
+            txtRecherche.Text = "";
+            txtIdBillet.Visible = false;
+            id.Visible = false;
         }
     }
 }
