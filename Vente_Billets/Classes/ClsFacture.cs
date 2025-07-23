@@ -26,7 +26,7 @@ namespace Vente_Billets.Classes
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgv.GridColor = Color.Gray;
-            dgv.DataSource = ClsDict.Instance.loadData("Facture");
+            dgv.DataSource = ClsDict.Instance.loadData("Affichez_Facture");
             txtId.Visible = false;
             lblId.Visible = false;
 

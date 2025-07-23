@@ -38,16 +38,17 @@ namespace Vente_Billets.Formulaires
             this.BtnDeleteAgent = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdateAgent = new Guna.UI2.WinForms.Guna2Button();
             this.BtnAjouterAgent = new Guna.UI2.WinForms.Guna2Button();
-            this.txtIdAgents = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdfacture = new Guna.UI2.WinForms.Guna2TextBox();
             this.id = new System.Windows.Forms.Label();
-            this.dgvAgents = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgvFacture = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmbClient = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cmbAgent = new Guna.UI2.WinForms.Guna2ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAgents)).BeginInit();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +89,7 @@ namespace Vente_Billets.Formulaires
             this.BtnDeleteAgent.Size = new System.Drawing.Size(180, 45);
             this.BtnDeleteAgent.TabIndex = 124;
             this.BtnDeleteAgent.Text = "Delete";
+            this.BtnDeleteAgent.Click += new System.EventHandler(this.BtnDeleteAgent_Click);
             // 
             // btnUpdateAgent
             // 
@@ -102,6 +104,7 @@ namespace Vente_Billets.Formulaires
             this.btnUpdateAgent.Size = new System.Drawing.Size(180, 45);
             this.btnUpdateAgent.TabIndex = 123;
             this.btnUpdateAgent.Text = "Update";
+            this.btnUpdateAgent.Click += new System.EventHandler(this.btnUpdateAgent_Click);
             // 
             // BtnAjouterAgent
             // 
@@ -116,25 +119,26 @@ namespace Vente_Billets.Formulaires
             this.BtnAjouterAgent.Size = new System.Drawing.Size(180, 45);
             this.BtnAjouterAgent.TabIndex = 122;
             this.BtnAjouterAgent.Text = "Ajouter";
+            this.BtnAjouterAgent.Click += new System.EventHandler(this.BtnAjouterAgent_Click);
             // 
-            // txtIdAgents
+            // txtIdfacture
             // 
-            this.txtIdAgents.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdAgents.DefaultText = "";
-            this.txtIdAgents.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdAgents.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdAgents.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdAgents.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdAgents.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdAgents.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdAgents.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdAgents.Location = new System.Drawing.Point(118, 212);
-            this.txtIdAgents.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.txtIdAgents.Name = "txtIdAgents";
-            this.txtIdAgents.PlaceholderText = "";
-            this.txtIdAgents.SelectedText = "";
-            this.txtIdAgents.Size = new System.Drawing.Size(267, 38);
-            this.txtIdAgents.TabIndex = 121;
+            this.txtIdfacture.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdfacture.DefaultText = "";
+            this.txtIdfacture.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdfacture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdfacture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdfacture.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdfacture.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdfacture.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdfacture.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdfacture.Location = new System.Drawing.Point(118, 212);
+            this.txtIdfacture.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtIdfacture.Name = "txtIdfacture";
+            this.txtIdfacture.PlaceholderText = "";
+            this.txtIdfacture.SelectedText = "";
+            this.txtIdfacture.Size = new System.Drawing.Size(267, 38);
+            this.txtIdfacture.TabIndex = 121;
             // 
             // id
             // 
@@ -145,10 +149,10 @@ namespace Vente_Billets.Formulaires
             this.id.TabIndex = 120;
             this.id.Text = "id";
             // 
-            // dgvAgents
+            // dgvFacture
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvAgents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFacture.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,9 +160,9 @@ namespace Vente_Billets.Formulaires
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAgents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAgents.ColumnHeadersHeight = 4;
-            this.dgvAgents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvFacture.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFacture.ColumnHeadersHeight = 4;
+            this.dgvFacture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,10 +170,10 @@ namespace Vente_Billets.Formulaires
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAgents.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAgents.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAgents.Location = new System.Drawing.Point(104, 292);
-            this.dgvAgents.Name = "dgvAgents";
+            this.dgvFacture.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFacture.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvFacture.Location = new System.Drawing.Point(104, 292);
+            this.dgvFacture.Name = "dgvFacture";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,33 +181,34 @@ namespace Vente_Billets.Formulaires
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAgents.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvAgents.RowHeadersVisible = false;
-            this.dgvAgents.RowHeadersWidth = 62;
-            this.dgvAgents.RowTemplate.Height = 28;
-            this.dgvAgents.Size = new System.Drawing.Size(1108, 276);
-            this.dgvAgents.TabIndex = 119;
-            this.dgvAgents.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAgents.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvAgents.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvAgents.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvAgents.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvAgents.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAgents.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAgents.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvAgents.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvAgents.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAgents.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvAgents.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvAgents.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvAgents.ThemeStyle.ReadOnly = false;
-            this.dgvAgents.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvAgents.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvAgents.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAgents.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvAgents.ThemeStyle.RowsStyle.Height = 28;
-            this.dgvAgents.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAgents.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvFacture.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvFacture.RowHeadersVisible = false;
+            this.dgvFacture.RowHeadersWidth = 62;
+            this.dgvFacture.RowTemplate.Height = 28;
+            this.dgvFacture.Size = new System.Drawing.Size(1108, 276);
+            this.dgvFacture.TabIndex = 119;
+            this.dgvFacture.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFacture.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvFacture.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvFacture.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvFacture.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvFacture.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFacture.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvFacture.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvFacture.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvFacture.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvFacture.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvFacture.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvFacture.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvFacture.ThemeStyle.ReadOnly = false;
+            this.dgvFacture.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFacture.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvFacture.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvFacture.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvFacture.ThemeStyle.RowsStyle.Height = 28;
+            this.dgvFacture.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvFacture.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvFacture.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFacture_CellClick);
             // 
             // cmbClient
             // 
@@ -250,18 +255,6 @@ namespace Vente_Billets.Formulaires
             this.label7.TabIndex = 109;
             this.label7.Text = "ENREGISTREMENT DES FACTURES";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Vente_Billets.Properties.Resources.facture;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1312, 151);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(450, 417);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 131;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // cmbAgent
             // 
             this.cmbAgent.BackColor = System.Drawing.Color.Transparent;
@@ -277,12 +270,40 @@ namespace Vente_Billets.Formulaires
             this.cmbAgent.Size = new System.Drawing.Size(250, 36);
             this.cmbAgent.TabIndex = 132;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Vente_Billets.Properties.Resources.facture;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1312, 151);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(450, 417);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 131;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(1170, 602);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.TabIndex = 133;
+            this.guna2Button1.Text = "Imprimer";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // FrmFacture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1800, 692);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.cmbAgent);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.cmbPlace);
@@ -290,9 +311,9 @@ namespace Vente_Billets.Formulaires
             this.Controls.Add(this.BtnDeleteAgent);
             this.Controls.Add(this.btnUpdateAgent);
             this.Controls.Add(this.BtnAjouterAgent);
-            this.Controls.Add(this.txtIdAgents);
+            this.Controls.Add(this.txtIdfacture);
             this.Controls.Add(this.id);
-            this.Controls.Add(this.dgvAgents);
+            this.Controls.Add(this.dgvFacture);
             this.Controls.Add(this.cmbClient);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
@@ -300,7 +321,8 @@ namespace Vente_Billets.Formulaires
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmFacture";
             this.Text = "FrmFacture";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAgents)).EndInit();
+            this.Load += new System.EventHandler(this.FrmFacture_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -313,14 +335,15 @@ namespace Vente_Billets.Formulaires
         private Guna.UI2.WinForms.Guna2Button BtnDeleteAgent;
         private Guna.UI2.WinForms.Guna2Button btnUpdateAgent;
         private Guna.UI2.WinForms.Guna2Button BtnAjouterAgent;
-        private Guna.UI2.WinForms.Guna2TextBox txtIdAgents;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdfacture;
         private System.Windows.Forms.Label id;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvAgents;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvFacture;
         private Guna.UI2.WinForms.Guna2ComboBox cmbClient;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbAgent;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

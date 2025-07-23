@@ -184,6 +184,34 @@ namespace Vente_Billets.Classes
             }
         }
 
+        public void Produire_Facture(int id)
+        {
+            string query = @"EXEC Production_Facture @id";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public DataTable Affichez_Facture(int id)
+        {
+            string query = @"SELECT * FROM Affichez_Facture WHERE id = @id";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", id);
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
         public DataTable loadData(string nomTable)
         {
             if (!con.State.ToString().ToLower().Equals("open")) con.Open();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vente_Billets.Classes;
 
 namespace Vente_Billets.Formulaires
 {
@@ -15,6 +17,86 @@ namespace Vente_Billets.Formulaires
         public FrmFacture()
         {
             InitializeComponent();
+        }
+
+        private void FrmFacture_Load(object sender, EventArgs e)
+        {
+            if (ClsDict.Instance.OpenConnection())
+            {
+                ClsFacture.ChargementFacture(dgvFacture, txtIdfacture, id);
+                ClsDict.Instance.loadCombo("tPlace", "typePlace", cmbPlace);
+                ClsDict.Instance.loadCombo("tClients", "noms", cmbClient);
+                ClsDict.Instance.loadCombo("tAgents", "noms", cmbAgent);
+            }
+        }
+
+        ClsFacture fact = new ClsFacture();
+
+        private void InsertUpdateFacture(int a)
+        {
+            fact.RefAgent = int.Parse(ClsDict.Instance.getcode_Combo("tAgents", "id", "noms", cmbAgent.Text));
+            fact.RefClient = int.Parse(ClsDict.Instance.getcode_Combo("tClients", "id", "noms", cmbClient.Text));
+            fact.RefPlace = int.Parse(ClsDict.Instance.getcode_Combo("tPlace", "id", "typePlace", cmbPlace.Text));
+
+            if (a == 1)
+            {
+                fact.Id = 0;
+                ClsDict.Instance.SaveUpdatefacture(fact);
+                ClsFacture.ChargementFacture(dgvFacture, txtIdfacture, id);
+            }
+
+            else if (a == 2)
+            {
+                fact.Id = int.Parse(txtIdfacture.Text);
+                ClsDict.Instance.SaveUpdatefacture(fact);
+                ClsFacture.ChargementFacture(dgvFacture, txtIdfacture, id);
+            }
+
+            else if (a == 3)
+            {
+                ClsDict.Instance.Deletedata("Facture", "id", int.Parse(txtIdfacture.Text));
+                ClsFacture.ChargementFacture(dgvFacture, txtIdfacture, id);
+            }
+        }
+
+        private void BtnAjouterAgent_Click(object sender, EventArgs e)
+        {
+            InsertUpdateFacture(1);
+        }
+
+        private void btnUpdateAgent_Click(object sender, EventArgs e)
+        {
+            InsertUpdateFacture(2);
+        }
+
+        private void BtnDeleteAgent_Click(object sender, EventArgs e)
+        {
+            InsertUpdateFacture(3);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Facture facture = new Facture(int.Parse(txtIdfacture.Text));
+            ReportPrintTool tool = new ReportPrintTool(facture);
+            tool.ShowPreviewDialog();
+
+        }
+
+        private void dgvFacture_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvFacture.Rows[e.RowIndex];
+
+            txtIdfacture.Text = row.Cells["id"].Value.ToString();
+            
+            
+           
+            cmbPlace.Text = row.Cells["Type de Place"].Value.ToString();
+            cmbAgent.Text = row.Cells["Agent"].Value.ToString();
+            cmbClient.Text = row.Cells["Client"].Value.ToString();
+
+
+            txtIdfacture.Visible = true;
+            id.Visible = true;
         }
     }
 }
