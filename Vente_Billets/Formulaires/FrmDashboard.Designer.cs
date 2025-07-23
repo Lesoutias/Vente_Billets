@@ -47,7 +47,7 @@ namespace Vente_Billets.Formulaires
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.timerBienvenue = new System.Windows.Forms.Timer(this.components);
             this.panelHaut = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRecherche = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelAffichage = new Guna.UI2.WinForms.Guna2Panel();
             this.panelGauche.SuspendLayout();
@@ -299,8 +299,9 @@ namespace Vente_Billets.Formulaires
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::Vente_Billets.Properties.Resources.logo2;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-4, 5);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-20, 17);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(303, 211);
@@ -344,7 +345,7 @@ namespace Vente_Billets.Formulaires
             // 
             this.panelHaut.BorderColor = System.Drawing.Color.Black;
             this.panelHaut.BorderThickness = 2;
-            this.panelHaut.Controls.Add(this.guna2TextBox1);
+            this.panelHaut.Controls.Add(this.txtRecherche);
             this.panelHaut.Controls.Add(this.guna2ControlBox2);
             this.panelHaut.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHaut.FillColor = System.Drawing.Color.White;
@@ -355,27 +356,28 @@ namespace Vente_Billets.Formulaires
             this.panelHaut.TabIndex = 53;
             this.panelHaut.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHaut_Paint);
             // 
-            // guna2TextBox1
+            // txtRecherche
             // 
-            this.guna2TextBox1.BorderRadius = 20;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(10, 17);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Recherche";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(394, 45);
-            this.guna2TextBox1.TabIndex = 55;
+            this.txtRecherche.BorderRadius = 20;
+            this.txtRecherche.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRecherche.DefaultText = "";
+            this.txtRecherche.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRecherche.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRecherche.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRecherche.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRecherche.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRecherche.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecherche.ForeColor = System.Drawing.Color.Black;
+            this.txtRecherche.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRecherche.Location = new System.Drawing.Point(10, 17);
+            this.txtRecherche.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtRecherche.Name = "txtRecherche";
+            this.txtRecherche.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtRecherche.PlaceholderText = "Recherche";
+            this.txtRecherche.SelectedText = "";
+            this.txtRecherche.Size = new System.Drawing.Size(747, 45);
+            this.txtRecherche.TabIndex = 55;
+            this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
             // 
             // guna2ControlBox2
             // 
@@ -445,7 +447,7 @@ namespace Vente_Billets.Formulaires
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtRecherche;
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2Panel panelAffichage;
     }

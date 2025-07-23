@@ -36,7 +36,7 @@ namespace Vente_Billets.Classes
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgv.GridColor = Color.Gray;
-            dgv.DataSource = ClsDict.Instance.loadData("tBillet");
+            dgv.DataSource = ClsDict.Instance.loadData("Affichez_Billet");
             txtId.Visible = false;
             lblId.Visible = false;
             

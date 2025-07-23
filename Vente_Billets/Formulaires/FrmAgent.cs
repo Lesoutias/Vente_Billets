@@ -17,6 +17,8 @@ namespace Vente_Billets.Formulaires
         {
             InitializeComponent();
 
+            LoadData();
+
         }
 
         
@@ -24,6 +26,24 @@ namespace Vente_Billets.Formulaires
         {
 
         }
+
+        public DataTable DataSourceTable { get; private set; }
+        private void LoadData()
+        {
+            DataSourceTable = ClsDict.Instance.loadData("Affichez_Agent");
+            dgvAgents.DataSource = DataSourceTable;
+        }
+
+        public void Filtrer(string recherche)
+        {
+            if (DataSourceTable != null)
+            {
+                DataView dv = DataSourceTable.DefaultView;
+                dv.RowFilter = $"nomAgent LIKE '%{recherche.Replace("'", "''")}%'"; // colonne à adapter
+            }
+        }
+
+        public DataGridView GetGrid() => dgvAgents;
 
         private void FrmAgent_Load(object sender, EventArgs e)
         {
@@ -95,6 +115,16 @@ namespace Vente_Billets.Formulaires
         }
 
         private void dgvAgents_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgvAgents_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgvAgents_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dgvAgents.Rows[e.RowIndex];
 

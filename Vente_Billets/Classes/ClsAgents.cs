@@ -29,10 +29,15 @@ namespace Vente_Billets.Classes
 
         public static void ChargementAgent(DataGridView dgv, Guna2TextBox txtId, Label lblId, ComboBox cmb)
         {
+            dgv.ColumnHeadersVisible = true;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             dgv.GridColor = Color.Gray;
-            dgv.DataSource = ClsDict.Instance.loadData("tAgents");
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(100, 88, 255); // ou une autre couleur
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgv.DataSource = ClsDict.Instance.loadData("Affichez_Agent");
             txtId.Visible = false;
             lblId.Visible = false;
             ClsDict.Instance.loadCombo("tSalle", "nomSalle", cmb);

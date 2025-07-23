@@ -17,7 +17,7 @@ namespace Vente_Billets.Formulaires
             InitializeComponent();
         }
 
-        private string texteComplet = @"Bienvenue dans notre application de gestion de la vente des billets d'entree.";
+        private string texteComplet = "Bienvenue dans notre application de gestion de la vente des billets d'entree.";
         private int indexLettre = 0;
 
         //private void ChargerFormulaire(Form form)
@@ -32,18 +32,20 @@ namespace Vente_Billets.Formulaires
 
         //}
 
+        private Form formulaireActif;
+
+
         private void ChargerFormulaire(Form form)
         {
             panelAffichage.Controls.Clear();
 
+            formulaireActif = form; // <<<<< On mémorise le form actif
+
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill; // Ne pas étirer le formulaire
+            form.Dock = DockStyle.Fill;
 
-            // Ajout au panel avant de calculer la position
             panelAffichage.Controls.Add(form);
-
-            // Centrer le formulaire dans le panel
             form.StartPosition = FormStartPosition.Manual;
             form.Location = new Point(
                 (panelAffichage.Width - form.Width) / 2,
@@ -52,6 +54,7 @@ namespace Vente_Billets.Formulaires
 
             form.Show();
         }
+
 
         private void timerBienvenue_Tick(object sender, EventArgs e)
         {
@@ -150,6 +153,14 @@ namespace Vente_Billets.Formulaires
         private void panelAffichage_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtRecherche_TextChanged(object sender, EventArgs e)
+        {
+            if (formulaireActif is FrmAgent frmAgent)
+            {
+                frmAgent.Filtrer(txtRecherche.Text);
+            }
         }
     }
 }
