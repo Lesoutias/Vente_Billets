@@ -132,6 +132,58 @@ namespace Vente_Billets.Classes
             }
         }
 
+        public void SaveUpdatePaiement(ClsPaiement paie)
+        {
+            string query = @"EXEC SaveOrUpdatePaiement @id, @datePaiement, @modePaiement, @montant, @refAgent, @refClient";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", paie.Id);
+                cmd.Parameters.AddWithValue("@datePaiement", paie.DatePaiement);
+                cmd.Parameters.AddWithValue("@modePaiement", paie.ModePaiement);
+                cmd.Parameters.AddWithValue("@montant", paie.Montant);
+                cmd.Parameters.AddWithValue("@refAgent", paie.RefAgent);
+                cmd.Parameters.AddWithValue("@refClient", paie.RefClient);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void SaveUpdateBillet(ClsBillets bi)
+        {
+            string query = @"EXEC SaveOrUpdateBillet @id, @prix, @dateAchat, @statut, @refSpectacle, @refPlace, @refClient, @refAgent, @refFacture";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", bi.Id);
+                cmd.Parameters.AddWithValue("@prix", bi.Prix);
+                cmd.Parameters.AddWithValue("@dateAchat", bi.DateAchat);
+                cmd.Parameters.AddWithValue("@statut", bi.Statut);
+                cmd.Parameters.AddWithValue("@refSpectacle", bi.RefSpectacle1);
+                cmd.Parameters.AddWithValue("@refPlace", bi.RefPlace1);
+                cmd.Parameters.AddWithValue("@refAgent", bi.RefAgent1);
+                cmd.Parameters.AddWithValue("@refClient", bi.RefClient1);
+                cmd.Parameters.AddWithValue("@refFacture", bi.RefFacture);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void SaveUpdatefacture(ClsFacture fact)
+        {
+            string query = @"EXEC SaveOrUpdateFacture @id, @refClient, @refAgent, @refPlace";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", fact.Id);
+                cmd.Parameters.AddWithValue("@refPlace", fact.RefPlace);
+                cmd.Parameters.AddWithValue("@refAgent", fact.RefAgent);
+                cmd.Parameters.AddWithValue("@refClient", fact.RefClient);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         public DataTable loadData(string nomTable)
         {
             if (!con.State.ToString().ToLower().Equals("open")) con.Open();
@@ -202,6 +254,30 @@ namespace Vente_Billets.Classes
 
             return IdData;
         }
+
+        public string GetNomDepuisId(string nomTable, string nomChampId, string nomChampAffiche, string valeurId)
+        {
+            string nomAffiche = "";
+            try
+            {
+                if (con.State != ConnectionState.Open) con.Open();
+                cmd = new SqlCommand("SELECT " + nomChampAffiche + " FROM " + nomTable + " WHERE " + nomChampId + " = @id", con);
+                cmd.Parameters.AddWithValue("@id", valeurId);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    nomAffiche = dr[nomChampAffiche].ToString();
+                }
+                cmd.Dispose();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message);
+            }
+            return nomAffiche;
+        }
+
 
 
     }

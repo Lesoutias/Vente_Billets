@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vente_Billets.Classes;
 
 namespace Vente_Billets.Formulaires
 {
@@ -15,6 +16,75 @@ namespace Vente_Billets.Formulaires
         public FrmPaiement()
         {
             InitializeComponent();
+        }
+
+        private void FrmPaiement_Load(object sender, EventArgs e)
+        {
+            if (ClsDict.Instance.OpenConnection())
+            {
+                ClsPaiement.ChargementPaiement(dgvPaiement, txtIdPaiement, id, cmbModePaie);
+                ClsDict.Instance.loadCombo("tAgents","noms",cmbAgent);
+                ClsDict.Instance.loadCombo("tClients", "noms", cmbClient);
+            }
+        }
+
+        ClsPaiement paie = new ClsPaiement();
+
+        private void InsertUpdatePaiement(int a)
+        {
+            paie.ModePaiement = cmbModePaie.Text;
+            paie.Montant = double.Parse(txtMontant.Text);
+            paie.DatePaiement = DateTime.Parse(DatePaie.Text);
+            paie.RefAgent = int.Parse(ClsDict.Instance.getcode_Combo("tAgents", "id", "noms", cmbAgent.Text));
+            paie.RefClient = int.Parse(ClsDict.Instance.getcode_Combo("tClients", "id", "noms", cmbClient.Text));
+
+            if (a == 1)
+            {
+                paie.Id = 0;
+                ClsDict.Instance.SaveUpdatePaiement(paie);
+                ClsPaiement.ChargementPaiement(dgvPaiement, txtIdPaiement, id, cmbModePaie);
+            }
+            else if (a == 2)
+            {
+                paie.Id = int.Parse(txtIdPaiement.Text);
+                ClsDict.Instance.SaveUpdatePaiement(paie);
+                ClsPaiement.ChargementPaiement(dgvPaiement, txtIdPaiement, id, cmbModePaie);
+            }
+            else if (a == 3)
+            {
+                ClsDict.Instance.Deletedata("tPaiement", "id", int.Parse(txtIdPaiement.Text));
+                ClsPaiement.ChargementPaiement(dgvPaiement, txtIdPaiement, id, cmbModePaie);
+            }
+        }
+
+        private void BtnAjouterAgent_Click(object sender, EventArgs e)
+        {
+            InsertUpdatePaiement(1);
+        }
+
+        private void btnUpdateAgent_Click(object sender, EventArgs e)
+        {
+            InsertUpdatePaiement(2);
+        }
+
+        private void BtnDeleteAgent_Click(object sender, EventArgs e)
+        {
+            InsertUpdatePaiement(3);
+        }
+
+        private void dgvPaiement_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvPaiement.Rows[e.RowIndex];
+
+            txtIdPaiement.Text = row.Cells["id"].Value.ToString(); // ID
+            DatePaie.Text = row.Cells["datePaiement"].Value.ToString();
+            cmbModePaie.Text = row.Cells["modePaiment"].Value.ToString();
+            txtMontant.Text = row.Cells["montant"].Value.ToString();
+            cmbAgent.Text = row.Cells["refAgent"].Value.ToString();
+            cmbClient.SelectedValue = row.Cells["refClient"].Value;
+
+            txtIdPaiement.Visible = true;
+            id.Visible = true;
         }
     }
 }

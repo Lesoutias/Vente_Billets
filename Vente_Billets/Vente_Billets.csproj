@@ -53,9 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ClsAgents.cs" />
+    <Compile Include="Classes\ClsBillets.cs" />
     <Compile Include="Classes\ClsClients.cs" />
     <Compile Include="Classes\ClsConnexion.cs" />
     <Compile Include="Classes\ClsDict.cs" />
+    <Compile Include="Classes\ClsFacture.cs" />
+    <Compile Include="Classes\ClsPaiement.cs" />
     <Compile Include="Classes\ClsPlace.cs" />
     <Compile Include="Classes\ClsSalle.cs" />
     <Compile Include="Classes\ClsSpectacle.cs" />
@@ -65,11 +68,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulaires\FrmAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\FrmAgent.Designer.cs">
+      <DependentUpon>FrmAgent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulaires\FrmBillet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formulaires\FrmBillet.Designer.cs">
       <DependentUpon>FrmBillet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\FrmClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\FrmClient.Designer.cs">
+      <DependentUpon>FrmClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulaires\FrmFacture.cs">
       <SubType>Form</SubType>
@@ -112,8 +133,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\FrmAgent.resx">
+      <DependentUpon>FrmAgent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulaires\FrmBillet.resx">
       <DependentUpon>FrmBillet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\FrmClient.resx">
+      <DependentUpon>FrmClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulaires\FrmFacture.resx">
       <DependentUpon>FrmFacture.cs</DependentUpon>
