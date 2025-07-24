@@ -179,16 +179,16 @@ namespace Vente_Billets.Formulaires
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (bi.Statut == false)
+            if (!ClsDict.Instance.GetStatut(int.Parse(txtIdBillet.Text)))
             {
-                bi.Statut = true;
+                ClsDict.Instance.SetStatut(int.Parse(txtIdBillet.Text));
+                ClsBillets.ChargementBillets(dgvBillet, txtIdBillet, id);
             }
             else
             {
-                MessageBox.Show("Le billet a ete deja vendu", "Statut Billet", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Billet Vendu");
                 return;
             }
-            ClsBillets.ChargementBillets(dgvBillet, txtIdBillet, id);
 
             Billet billet = new Billet(int.Parse(txtIdBillet.Text));
             ReportPrintTool tool = new ReportPrintTool(billet);

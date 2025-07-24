@@ -98,11 +98,14 @@ namespace Vente_Billets.Formulaires
             ChargerFormulaire(new FrmSpectacle());
         }
 
+        
+
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             panelAffichage.Visible = true;
             ChargerFormulaire(new FrmSalle());
         }
+        
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -158,6 +161,11 @@ namespace Vente_Billets.Formulaires
         private void txtRecherche_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

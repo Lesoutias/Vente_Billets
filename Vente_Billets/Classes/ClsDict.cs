@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace Vente_Billets.Classes
 {
@@ -246,6 +247,68 @@ namespace Vente_Billets.Classes
                 }
             }
         }
+
+        public void SetStatut(int id)
+        {
+            string query = @"UPDATE tBillet SET statut = 1 WHERE id = @id";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public bool GetStatut(int id)
+        {
+            string query = @"SELECT statut FROM tBillet WHERE id = @id";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (ClsDict.Instance.con.State != ConnectionState.Open)
+                    ClsDict.Instance.con.Open();
+
+                cmd.Parameters.AddWithValue("@id", id);
+                object result = cmd.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToBoolean(result); // true = vendu, false = non vendu
+                }
+                else
+                {
+                    // Si aucun billet trouvé, on considère "non vendu"
+                    return false;
+                }
+            }
+        }
+
+        public string GetRole(string username, string pwd)
+        {
+            string query = @"SELECT fonction FROM tAgents WHERE username = @username AND pwd = @pwd";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (ClsDict.Instance.con.State != ConnectionState.Open)
+                    ClsDict.Instance.con.Open();
+
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@pwd", pwd);
+                object result = cmd.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToString(result); // true = vendu, false = non vendu
+                }
+                else
+                {
+                    // Si aucun billet trouvé, on considère "non vendu"
+                    return "Agent non trouve";
+                }
+            }
+        }
+
         public DataTable loadData(string nomTable)
         {
             if (!con.State.ToString().ToLower().Equals("open")) con.Open();
@@ -355,6 +418,51 @@ namespace Vente_Billets.Classes
             return table;
         }
 
+        public ClsAgents SeConnecter(string login, string motDePasse)
+        {
+
+            if (con.State != ConnectionState.Open) con.Open();
+            string query = "SELECT * FROM tAgents WHERE username = @username AND pwd = @mdp";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                cmd.Parameters.AddWithValue("@username", login);
+                cmd.Parameters.AddWithValue("@mdp", (motDePasse));
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        var ag = new ClsAgents
+                        {
+                            Id = (int)reader["id"],
+                            Noms = reader["noms"].ToString(),
+                            Contact = reader["contact"].ToString(),
+                            Fonction = reader["fonction"].ToString(),
+                            Username = reader["username"].ToString(),
+                            Password = reader["pwd"].ToString(),
+                            RefSalle = reader["refSalle"].ToString(),
+                            
+                        };
+
+                        return ag;
+                    }
+                    reader.Close(); // Ferme le lecteur de données après utilisation
+                }
+            }
+            return null; // Si aucune correspondance n'est trouvée
+
+        }
+
+        public static string HasherMotDePasse(string motDePasse)
+        {
+            using (SHA256 sha = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(motDePasse);
+                byte[] hash = sha.ComputeHash(bytes);
+                return Convert.ToBase64String(hash); // Encodage en Base64 pour stocker dans la BDD
+            }
+        }
 
     }
 }

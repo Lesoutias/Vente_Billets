@@ -14,7 +14,7 @@ namespace Vente_Billets.Classes
         int id;
         DateTime dateAchat;
         double prix;
-        bool statut = false;
+        bool statut;
         int RefClient;
         int RefAgent;
         int RefPlace;
@@ -28,8 +28,9 @@ namespace Vente_Billets.Classes
         public int RefAgent1 { get => RefAgent; set => RefAgent = value; }
         public int RefPlace1 { get => RefPlace; set => RefPlace = value; }
         public int RefSpectacle1 { get => RefSpectacle; set => RefSpectacle = value; }
-        public bool Statut { get => statut; set => statut = value; }
+        
         public int RefFacture { get => refFacture; set => refFacture = value; }
+        public bool Statut { get => statut; set => statut = value; }
 
         public static void ChargementBillets(DataGridView dgv, Guna2TextBox txtId, Label lblId)
         {
