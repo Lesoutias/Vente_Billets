@@ -55,6 +55,7 @@ namespace Vente_Billets.Formulaires
             this.cmbFacture = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgvBillet = new System.Windows.Forms.DataGridView();
             this.txtRecherche = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBillet)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +95,7 @@ namespace Vente_Billets.Formulaires
             this.BtnDeleteAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BtnDeleteAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnDeleteAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnDeleteAgent.Location = new System.Drawing.Point(557, 736);
+            this.BtnDeleteAgent.Location = new System.Drawing.Point(577, 736);
             this.BtnDeleteAgent.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDeleteAgent.Name = "BtnDeleteAgent";
             this.BtnDeleteAgent.Size = new System.Drawing.Size(120, 29);
@@ -110,7 +111,7 @@ namespace Vente_Billets.Formulaires
             this.btnUpdateAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUpdateAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdateAgent.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateAgent.Location = new System.Drawing.Point(345, 736);
+            this.btnUpdateAgent.Location = new System.Drawing.Point(297, 736);
             this.btnUpdateAgent.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateAgent.Name = "btnUpdateAgent";
             this.btnUpdateAgent.Size = new System.Drawing.Size(120, 29);
@@ -126,7 +127,7 @@ namespace Vente_Billets.Formulaires
             this.BtnAjouterAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BtnAjouterAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAjouterAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnAjouterAgent.Location = new System.Drawing.Point(139, 736);
+            this.BtnAjouterAgent.Location = new System.Drawing.Point(53, 736);
             this.BtnAjouterAgent.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAjouterAgent.Name = "BtnAjouterAgent";
             this.BtnAjouterAgent.Size = new System.Drawing.Size(120, 29);
@@ -409,12 +410,29 @@ namespace Vente_Billets.Formulaires
             this.txtRecherche.TabIndex = 114;
             this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(838, 736);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button1.TabIndex = 115;
+            this.guna2Button1.Text = "Imprimez Billet";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // FrmBillet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.txtRecherche);
             this.Controls.Add(this.dgvBillet);
             this.Controls.Add(this.cmbFacture);
@@ -476,5 +494,6 @@ namespace Vente_Billets.Formulaires
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvBillet;
         private Guna.UI2.WinForms.Guna2TextBox txtRecherche;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

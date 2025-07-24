@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vente_Billets.Classes;
+using Vente_Billets.Rapports;
 
 namespace Vente_Billets.Formulaires
 {
@@ -173,6 +175,26 @@ namespace Vente_Billets.Formulaires
             txtRecherche.Text = "";
             txtIdBillet.Visible = false;
             id.Visible = false;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (bi.Statut == false)
+            {
+                bi.Statut = true;
+            }
+            else
+            {
+                MessageBox.Show("Le billet a ete deja vendu", "Statut Billet", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            ClsBillets.ChargementBillets(dgvBillet, txtIdBillet, id);
+
+            Billet billet = new Billet(int.Parse(txtIdBillet.Text));
+            ReportPrintTool tool = new ReportPrintTool(billet);
+            tool.ShowPreviewDialog();
+
+            
         }
     }
 }

@@ -229,6 +229,23 @@ namespace Vente_Billets.Classes
                 }
             }
         }
+
+        public DataTable Imprimez_Billet(int id)
+        {
+            string query = @"SELECT * FROM Imprmez_Billet WHERE id = @id";
+
+            using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
+            {
+                if (!con.State.ToString().ToLower().Equals("open")) con.Open();
+                cmd.Parameters.AddWithValue("@id", id);
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
         public DataTable loadData(string nomTable)
         {
             if (!con.State.ToString().ToLower().Equals("open")) con.Open();
