@@ -30,9 +30,6 @@ namespace Vente_Billets.Formulaires
         private void InitializeComponent()
         {
             this.DatePaie = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.BtnDeleteAgent = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUpdateAgent = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnAjouterAgent = new Guna.UI2.WinForms.Guna2Button();
             this.txtIdPaiement = new Guna.UI2.WinForms.Guna2TextBox();
             this.id = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -48,7 +45,10 @@ namespace Vente_Billets.Formulaires
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPaiement = new System.Windows.Forms.DataGridView();
             this.txtRecherche = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaiement)).BeginInit();
             this.SuspendLayout();
@@ -60,61 +60,13 @@ namespace Vente_Billets.Formulaires
             this.DatePaie.FillColor = System.Drawing.Color.White;
             this.DatePaie.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DatePaie.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DatePaie.Location = new System.Drawing.Point(103, 222);
+            this.DatePaie.Location = new System.Drawing.Point(101, 139);
             this.DatePaie.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DatePaie.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DatePaie.Name = "DatePaie";
             this.DatePaie.Size = new System.Drawing.Size(179, 37);
             this.DatePaie.TabIndex = 104;
             this.DatePaie.Value = new System.DateTime(2025, 7, 21, 4, 51, 15, 315);
-            // 
-            // BtnDeleteAgent
-            // 
-            this.BtnDeleteAgent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnDeleteAgent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnDeleteAgent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnDeleteAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnDeleteAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnDeleteAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnDeleteAgent.Location = new System.Drawing.Point(558, 758);
-            this.BtnDeleteAgent.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnDeleteAgent.Name = "BtnDeleteAgent";
-            this.BtnDeleteAgent.Size = new System.Drawing.Size(120, 29);
-            this.BtnDeleteAgent.TabIndex = 103;
-            this.BtnDeleteAgent.Text = "Delete";
-            this.BtnDeleteAgent.Click += new System.EventHandler(this.BtnDeleteAgent_Click);
-            // 
-            // btnUpdateAgent
-            // 
-            this.btnUpdateAgent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateAgent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateAgent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdateAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUpdateAgent.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateAgent.Location = new System.Drawing.Point(329, 758);
-            this.btnUpdateAgent.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUpdateAgent.Name = "btnUpdateAgent";
-            this.btnUpdateAgent.Size = new System.Drawing.Size(120, 29);
-            this.btnUpdateAgent.TabIndex = 102;
-            this.btnUpdateAgent.Text = "Update";
-            this.btnUpdateAgent.Click += new System.EventHandler(this.btnUpdateAgent_Click);
-            // 
-            // BtnAjouterAgent
-            // 
-            this.BtnAjouterAgent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnAjouterAgent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnAjouterAgent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnAjouterAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnAjouterAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnAjouterAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnAjouterAgent.Location = new System.Drawing.Point(123, 758);
-            this.BtnAjouterAgent.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnAjouterAgent.Name = "BtnAjouterAgent";
-            this.BtnAjouterAgent.Size = new System.Drawing.Size(120, 29);
-            this.BtnAjouterAgent.TabIndex = 101;
-            this.BtnAjouterAgent.Text = "Ajouter";
-            this.BtnAjouterAgent.Click += new System.EventHandler(this.BtnAjouterAgent_Click);
             // 
             // txtIdPaiement
             // 
@@ -127,7 +79,8 @@ namespace Vente_Billets.Formulaires
             this.txtIdPaiement.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdPaiement.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdPaiement.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdPaiement.Location = new System.Drawing.Point(104, 309);
+            this.txtIdPaiement.Location = new System.Drawing.Point(424, 186);
+            this.txtIdPaiement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdPaiement.Name = "txtIdPaiement";
             this.txtIdPaiement.PlaceholderText = "";
             this.txtIdPaiement.SelectedText = "";
@@ -138,7 +91,7 @@ namespace Vente_Billets.Formulaires
             // id
             // 
             this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(10, 321);
+            this.id.Location = new System.Drawing.Point(363, 198);
             this.id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(15, 13);
@@ -149,7 +102,7 @@ namespace Vente_Billets.Formulaires
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(325, 245);
+            this.label12.Location = new System.Drawing.Point(363, 149);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(35, 13);
@@ -159,7 +112,7 @@ namespace Vente_Billets.Formulaires
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 245);
+            this.label13.Location = new System.Drawing.Point(8, 149);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(30, 13);
@@ -177,7 +130,8 @@ namespace Vente_Billets.Formulaires
             this.txtMontant.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMontant.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMontant.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMontant.Location = new System.Drawing.Point(387, 155);
+            this.txtMontant.Location = new System.Drawing.Point(423, 88);
+            this.txtMontant.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.PlaceholderText = "";
             this.txtMontant.SelectedText = "";
@@ -187,7 +141,7 @@ namespace Vente_Billets.Formulaires
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(326, 167);
+            this.label9.Location = new System.Drawing.Point(363, 101);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 13);
@@ -197,7 +151,7 @@ namespace Vente_Billets.Formulaires
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 167);
+            this.label8.Location = new System.Drawing.Point(8, 100);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 13);
@@ -227,8 +181,8 @@ namespace Vente_Billets.Formulaires
             this.cmbModePaie.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbModePaie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbModePaie.ItemHeight = 30;
-            this.cmbModePaie.Location = new System.Drawing.Point(106, 144);
-            this.cmbModePaie.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbModePaie.Location = new System.Drawing.Point(103, 90);
+            this.cmbModePaie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbModePaie.Name = "cmbModePaie";
             this.cmbModePaie.Size = new System.Drawing.Size(178, 36);
             this.cmbModePaie.TabIndex = 107;
@@ -243,8 +197,8 @@ namespace Vente_Billets.Formulaires
             this.cmbAgent.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbAgent.ItemHeight = 30;
-            this.cmbAgent.Location = new System.Drawing.Point(386, 222);
-            this.cmbAgent.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAgent.Location = new System.Drawing.Point(424, 139);
+            this.cmbAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbAgent.Name = "cmbAgent";
             this.cmbAgent.Size = new System.Drawing.Size(168, 36);
             this.cmbAgent.TabIndex = 108;
@@ -253,7 +207,7 @@ namespace Vente_Billets.Formulaires
             // 
             this.guna2PictureBox1.Image = global::Vente_Billets.Properties.Resources.paiement;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(916, 409);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(785, 261);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(300, 268);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -270,8 +224,8 @@ namespace Vente_Billets.Formulaires
             this.cmbClient.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbClient.ItemHeight = 30;
-            this.cmbClient.Location = new System.Drawing.Point(668, 151);
-            this.cmbClient.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbClient.Location = new System.Drawing.Point(705, 84);
+            this.cmbClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbClient.Name = "cmbClient";
             this.cmbClient.Size = new System.Drawing.Size(168, 36);
             this.cmbClient.TabIndex = 110;
@@ -279,7 +233,7 @@ namespace Vente_Billets.Formulaires
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(604, 167);
+            this.label1.Location = new System.Drawing.Point(641, 101);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
@@ -291,8 +245,8 @@ namespace Vente_Billets.Formulaires
             this.dgvPaiement.BackgroundColor = System.Drawing.Color.White;
             this.dgvPaiement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPaiement.GridColor = System.Drawing.Color.White;
-            this.dgvPaiement.Location = new System.Drawing.Point(123, 467);
-            this.dgvPaiement.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPaiement.Location = new System.Drawing.Point(11, 261);
+            this.dgvPaiement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPaiement.Name = "dgvPaiement";
             this.dgvPaiement.RowHeadersWidth = 62;
             this.dgvPaiement.RowTemplate.Height = 28;
@@ -313,7 +267,7 @@ namespace Vente_Billets.Formulaires
             this.txtRecherche.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRecherche.ForeColor = System.Drawing.Color.Black;
             this.txtRecherche.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRecherche.Location = new System.Drawing.Point(123, 395);
+            this.txtRecherche.Location = new System.Drawing.Point(11, 189);
             this.txtRecherche.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -323,29 +277,80 @@ namespace Vente_Billets.Formulaires
             this.txtRecherche.TabIndex = 113;
             this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
             // 
-            // guna2Button1
+            // guna2Button2
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(763, 758);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(120, 29);
-            this.guna2Button1.TabIndex = 114;
-            this.guna2Button1.Text = "Recu";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(464, 603);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button2.TabIndex = 117;
+            this.guna2Button2.Text = "Delete";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Location = new System.Drawing.Point(252, 603);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button3.TabIndex = 116;
+            this.guna2Button3.Text = "Update";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Location = new System.Drawing.Point(45, 603);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button4.TabIndex = 115;
+            this.guna2Button4.Text = "Ajouter";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.Location = new System.Drawing.Point(643, 603);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button5.TabIndex = 118;
+            this.guna2Button5.Text = "Recu";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // FrmPaiement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1363, 826);
-            this.Controls.Add(this.guna2Button1);
+            this.ClientSize = new System.Drawing.Size(1283, 843);
+            this.Controls.Add(this.guna2Button5);
+            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.txtRecherche);
             this.Controls.Add(this.dgvPaiement);
             this.Controls.Add(this.label1);
@@ -354,9 +359,6 @@ namespace Vente_Billets.Formulaires
             this.Controls.Add(this.cmbAgent);
             this.Controls.Add(this.cmbModePaie);
             this.Controls.Add(this.DatePaie);
-            this.Controls.Add(this.BtnDeleteAgent);
-            this.Controls.Add(this.btnUpdateAgent);
-            this.Controls.Add(this.BtnAjouterAgent);
             this.Controls.Add(this.txtIdPaiement);
             this.Controls.Add(this.id);
             this.Controls.Add(this.label12);
@@ -377,9 +379,6 @@ namespace Vente_Billets.Formulaires
 
         #endregion
         private Guna.UI2.WinForms.Guna2DateTimePicker DatePaie;
-        private Guna.UI2.WinForms.Guna2Button BtnDeleteAgent;
-        private Guna.UI2.WinForms.Guna2Button btnUpdateAgent;
-        private Guna.UI2.WinForms.Guna2Button BtnAjouterAgent;
         private Guna.UI2.WinForms.Guna2TextBox txtIdPaiement;
         private System.Windows.Forms.Label id;
         private System.Windows.Forms.Label label12;
@@ -395,6 +394,9 @@ namespace Vente_Billets.Formulaires
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPaiement;
         private Guna.UI2.WinForms.Guna2TextBox txtRecherche;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
     }
 }

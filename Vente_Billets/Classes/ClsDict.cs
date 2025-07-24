@@ -120,13 +120,13 @@ namespace Vente_Billets.Classes
 
         public void SaveUpdatePlace(ClsPlace pl)
         {
-            string query = @"EXEC SaveOrUpdatePlace @id, @typePlace, @numero, @refSalle";
+            string query = @"EXEC SaveOrUpdatePlace @id, @numero, @refSalle, @refCategorie";
 
             using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
             {
                 if (!con.State.ToString().ToLower().Equals("open")) con.Open();
                 cmd.Parameters.AddWithValue("@id", pl.Id);
-                cmd.Parameters.AddWithValue("@typePlace", pl.TypePlace);
+                cmd.Parameters.AddWithValue("@refCategorie", pl.RefCategorie);
                 cmd.Parameters.AddWithValue("@numero", pl.NumPlace);
                 cmd.Parameters.AddWithValue("@refSalle", pl.RefSalle);
                 cmd.ExecuteNonQuery();
@@ -152,7 +152,7 @@ namespace Vente_Billets.Classes
 
         public void SaveUpdateBillet(ClsBillets bi)
         {
-            string query = @"EXEC SaveOrUpdateBillet @id, @prix, @dateAchat, @statut, @refSpectacle, @refPlace, @refClient, @refAgent, @refFacture";
+            string query = @"EXEC SaveOrUpdateBillet @id, @prix, @dateAchat, @statut, @refSpectacle, @refClient, @refAgent, @refFacture, @refPlace, @refCat";
 
             using (SqlCommand cmd = new SqlCommand(query, ClsDict.Instance.con))
             {
@@ -166,6 +166,7 @@ namespace Vente_Billets.Classes
                 cmd.Parameters.AddWithValue("@refAgent", bi.RefAgent1);
                 cmd.Parameters.AddWithValue("@refClient", bi.RefClient1);
                 cmd.Parameters.AddWithValue("@refFacture", bi.RefFacture);
+                cmd.Parameters.AddWithValue("@refCat", bi.RefCat1);
                 cmd.ExecuteNonQuery();
             }
         }

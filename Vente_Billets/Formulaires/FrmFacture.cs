@@ -24,7 +24,7 @@ namespace Vente_Billets.Formulaires
             if (ClsDict.Instance.OpenConnection())
             {
                 ClsFacture.ChargementFacture(dgvFacture, txtIdfacture, id);
-                ClsDict.Instance.loadCombo("tPlace", "typePlace", cmbPlace);
+                ClsDict.Instance.loadCombo("CategoriePlace", "designation", cmbPlace);
                 ClsDict.Instance.loadCombo("tClients", "noms", cmbClient);
                 ClsDict.Instance.loadCombo("tAgents", "noms", cmbAgent);
             }
@@ -36,7 +36,7 @@ namespace Vente_Billets.Formulaires
         {
             fact.RefAgent = int.Parse(ClsDict.Instance.getcode_Combo("tAgents", "id", "noms", cmbAgent.Text));
             fact.RefClient = int.Parse(ClsDict.Instance.getcode_Combo("tClients", "id", "noms", cmbClient.Text));
-            fact.RefPlace = int.Parse(ClsDict.Instance.getcode_Combo("tPlace", "id", "typePlace", cmbPlace.Text));
+            fact.RefPlace = int.Parse(ClsDict.Instance.getcode_Combo("CategoriePlace", "id", "designation", cmbPlace.Text));
 
             if (a == 1)
             {
@@ -147,9 +147,9 @@ namespace Vente_Billets.Formulaires
             DataGridViewRow row = dgvFacture.Rows[e.RowIndex];
 
             txtIdfacture.Text = row.Cells["id"].Value.ToString();
-            cmbPlace.Text = row.Cells["Type de Place"].Value.ToString();
-            cmbAgent.Text = row.Cells["Agent"].Value.ToString();
-            cmbClient.Text = row.Cells["Client"].Value.ToString();
+            cmbPlace.Text = row.Cells["refPlace"].Value.ToString();
+            cmbAgent.Text = row.Cells["refAgent"].Value.ToString();
+            cmbClient.Text = row.Cells["refClient"].Value.ToString();
 
 
             txtIdfacture.Visible = true;
@@ -159,6 +159,28 @@ namespace Vente_Billets.Formulaires
         private void txtRecherche_TextChanged(object sender, EventArgs e)
         {
             dgvFacture.DataSource = ClsDict.Instance.Rechercher(txtRecherche.Text.Trim(), "Affichez_Facture", "Client");
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            InsertUpdateFacture(1);
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            InsertUpdateFacture(2);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            InsertUpdateFacture(3);
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            Facture facture = new Facture(int.Parse(txtIdfacture.Text));
+            ReportPrintTool tool = new ReportPrintTool(facture);
+            tool.ShowPreviewDialog();
         }
     }
 }

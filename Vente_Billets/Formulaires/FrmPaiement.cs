@@ -61,17 +61,17 @@ namespace Vente_Billets.Formulaires
 
         private void BtnAjouterAgent_Click(object sender, EventArgs e)
         {
-            InsertUpdatePaiement(1);
+            
         }
 
         private void btnUpdateAgent_Click(object sender, EventArgs e)
         {
-            InsertUpdatePaiement(2);
+            
         }
 
         private void BtnDeleteAgent_Click(object sender, EventArgs e)
         {
-            InsertUpdatePaiement(3);
+           
         }
 
         private void dgvPaiement_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -110,6 +110,28 @@ namespace Vente_Billets.Formulaires
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Recu recu = new Recu(cmbClient.Text);
+            ReportPrintTool tool = new ReportPrintTool(recu);
+            tool.ShowPreviewDialog();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            InsertUpdatePaiement(1);
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            InsertUpdatePaiement(2);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            InsertUpdatePaiement(3);
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
         {
             Recu recu = new Recu(cmbClient.Text);
             ReportPrintTool tool = new ReportPrintTool(recu);

@@ -31,9 +31,6 @@ namespace Vente_Billets.Formulaires
         {
             this.cmbPlace = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnDeleteAgent = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUpdateAgent = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnAjouterAgent = new Guna.UI2.WinForms.Guna2Button();
             this.txtIdfacture = new Guna.UI2.WinForms.Guna2TextBox();
             this.id = new System.Windows.Forms.Label();
             this.cmbClient = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -42,9 +39,12 @@ namespace Vente_Billets.Formulaires
             this.label7 = new System.Windows.Forms.Label();
             this.cmbAgent = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.dgvFacture = new System.Windows.Forms.DataGridView();
             this.txtRecherche = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacture)).BeginInit();
             this.SuspendLayout();
@@ -77,54 +77,6 @@ namespace Vente_Billets.Formulaires
             this.label1.Text = "Place";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // BtnDeleteAgent
-            // 
-            this.BtnDeleteAgent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnDeleteAgent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnDeleteAgent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnDeleteAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnDeleteAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnDeleteAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnDeleteAgent.Location = new System.Drawing.Point(555, 688);
-            this.BtnDeleteAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BtnDeleteAgent.Name = "BtnDeleteAgent";
-            this.BtnDeleteAgent.Size = new System.Drawing.Size(120, 29);
-            this.BtnDeleteAgent.TabIndex = 124;
-            this.BtnDeleteAgent.Text = "Delete";
-            this.BtnDeleteAgent.Click += new System.EventHandler(this.BtnDeleteAgent_Click);
-            // 
-            // btnUpdateAgent
-            // 
-            this.btnUpdateAgent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateAgent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateAgent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdateAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUpdateAgent.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateAgent.Location = new System.Drawing.Point(343, 688);
-            this.btnUpdateAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnUpdateAgent.Name = "btnUpdateAgent";
-            this.btnUpdateAgent.Size = new System.Drawing.Size(120, 29);
-            this.btnUpdateAgent.TabIndex = 123;
-            this.btnUpdateAgent.Text = "Update";
-            this.btnUpdateAgent.Click += new System.EventHandler(this.btnUpdateAgent_Click);
-            // 
-            // BtnAjouterAgent
-            // 
-            this.BtnAjouterAgent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnAjouterAgent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnAjouterAgent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnAjouterAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnAjouterAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnAjouterAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnAjouterAgent.Location = new System.Drawing.Point(137, 688);
-            this.BtnAjouterAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BtnAjouterAgent.Name = "BtnAjouterAgent";
-            this.BtnAjouterAgent.Size = new System.Drawing.Size(120, 29);
-            this.BtnAjouterAgent.TabIndex = 122;
-            this.BtnAjouterAgent.Text = "Ajouter";
-            this.BtnAjouterAgent.Click += new System.EventHandler(this.BtnAjouterAgent_Click);
-            // 
             // txtIdfacture
             // 
             this.txtIdfacture.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -136,7 +88,7 @@ namespace Vente_Billets.Formulaires
             this.txtIdfacture.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdfacture.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdfacture.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdfacture.Location = new System.Drawing.Point(79, 234);
+            this.txtIdfacture.Location = new System.Drawing.Point(79, 178);
             this.txtIdfacture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdfacture.Name = "txtIdfacture";
             this.txtIdfacture.PlaceholderText = "";
@@ -148,7 +100,7 @@ namespace Vente_Billets.Formulaires
             // id
             // 
             this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(14, 242);
+            this.id.Location = new System.Drawing.Point(11, 190);
             this.id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(15, 13);
@@ -176,7 +128,7 @@ namespace Vente_Billets.Formulaires
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(626, 233);
+            this.label11.Location = new System.Drawing.Point(623, 179);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 13);
@@ -219,7 +171,7 @@ namespace Vente_Billets.Formulaires
             this.cmbAgent.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbAgent.ItemHeight = 30;
-            this.cmbAgent.Location = new System.Drawing.Point(688, 223);
+            this.cmbAgent.Location = new System.Drawing.Point(688, 169);
             this.cmbAgent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbAgent.Name = "cmbAgent";
             this.cmbAgent.Size = new System.Drawing.Size(168, 36);
@@ -230,7 +182,7 @@ namespace Vente_Billets.Formulaires
             // 
             this.guna2PictureBox1.Image = global::Vente_Billets.Properties.Resources.facture;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(936, 391);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(831, 279);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(300, 271);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -238,29 +190,13 @@ namespace Vente_Billets.Formulaires
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(755, 688);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(120, 29);
-            this.guna2Button1.TabIndex = 133;
-            this.guna2Button1.Text = "Imprimer";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // dgvFacture
             // 
             this.dgvFacture.BackgroundColor = System.Drawing.Color.White;
             this.dgvFacture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFacture.GridColor = System.Drawing.Color.White;
-            this.dgvFacture.Location = new System.Drawing.Point(137, 394);
-            this.dgvFacture.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvFacture.Location = new System.Drawing.Point(79, 279);
+            this.dgvFacture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvFacture.Name = "dgvFacture";
             this.dgvFacture.RowHeadersWidth = 62;
             this.dgvFacture.RowTemplate.Height = 28;
@@ -281,7 +217,7 @@ namespace Vente_Billets.Formulaires
             this.txtRecherche.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRecherche.ForeColor = System.Drawing.Color.Black;
             this.txtRecherche.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRecherche.Location = new System.Drawing.Point(137, 346);
+            this.txtRecherche.Location = new System.Drawing.Point(79, 231);
             this.txtRecherche.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -291,22 +227,86 @@ namespace Vente_Billets.Formulaires
             this.txtRecherche.TabIndex = 135;
             this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(498, 570);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button2.TabIndex = 138;
+            this.guna2Button2.Text = "Delete";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Location = new System.Drawing.Point(286, 570);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button3.TabIndex = 137;
+            this.guna2Button3.Text = "Update";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Location = new System.Drawing.Point(79, 570);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button4.TabIndex = 136;
+            this.guna2Button4.Text = "Ajouter";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.Location = new System.Drawing.Point(697, 570);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(120, 29);
+            this.guna2Button5.TabIndex = 139;
+            this.guna2Button5.Text = "Imprimez";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            // 
             // FrmFacture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1367, 834);
+            this.ClientSize = new System.Drawing.Size(1283, 839);
+            this.Controls.Add(this.guna2Button5);
+            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.txtRecherche);
             this.Controls.Add(this.dgvFacture);
-            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.cmbAgent);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.cmbPlace);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnDeleteAgent);
-            this.Controls.Add(this.btnUpdateAgent);
-            this.Controls.Add(this.BtnAjouterAgent);
             this.Controls.Add(this.txtIdfacture);
             this.Controls.Add(this.id);
             this.Controls.Add(this.cmbClient);
@@ -326,9 +326,6 @@ namespace Vente_Billets.Formulaires
         #endregion
         private Guna.UI2.WinForms.Guna2ComboBox cmbPlace;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button BtnDeleteAgent;
-        private Guna.UI2.WinForms.Guna2Button btnUpdateAgent;
-        private Guna.UI2.WinForms.Guna2Button BtnAjouterAgent;
         private Guna.UI2.WinForms.Guna2TextBox txtIdfacture;
         private System.Windows.Forms.Label id;
         private Guna.UI2.WinForms.Guna2ComboBox cmbClient;
@@ -337,8 +334,11 @@ namespace Vente_Billets.Formulaires
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbAgent;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.DataGridView dgvFacture;
         private Guna.UI2.WinForms.Guna2TextBox txtRecherche;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
     }
 }

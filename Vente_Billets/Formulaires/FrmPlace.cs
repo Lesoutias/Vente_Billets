@@ -23,6 +23,7 @@ namespace Vente_Billets.Formulaires
             if (ClsDict.Instance.OpenConnection())
             {
                 ClsPlace.ChargementPlace(dgvPlace, txtIdPlace, id, cmbSallePlace);
+                ClsDict.Instance.loadCombo("CategoriePlace", "designation", cmbCatPlace);
             }
             
         }
@@ -30,7 +31,7 @@ namespace Vente_Billets.Formulaires
         ClsPlace pl = new ClsPlace();
         private void InsertUpdatePlace(int a)
         {
-            pl.TypePlace = txtTypePlace.Text;
+            pl.RefCategorie = int.Parse(ClsDict.Instance.getcode_Combo("CategoriePlace", "id", "designation", cmbCatPlace.Text));
             pl.NumPlace = txtNumPlace.Text;
             pl.RefSalle = int.Parse(ClsDict.Instance.getcode_Combo("tSalle", "id", "nomSalle", cmbSallePlace.Text));
 
@@ -73,9 +74,27 @@ namespace Vente_Billets.Formulaires
             DataGridViewRow row = dgvPlace.Rows[e.RowIndex];
 
             txtIdPlace.Text = row.Cells["id"].Value.ToString(); // ID
-            txtTypePlace.Text = row.Cells["typePlace"].Value.ToString();
+           cmbCatPlace.Text = row.Cells["typePlace"].Value.ToString();
             txtNumPlace.Text = row.Cells["numero"].Value.ToString();
             cmbSallePlace.SelectedValue = row.Cells["refSalle"].Value;
+            
+            txtIdPlace.Visible = true;
+            id.Visible = true;
+        }
+
+        private void txtRecherche_TextChanged(object sender, EventArgs e)
+        {
+            dgvPlace.DataSource = ClsDict.Instance.Rechercher(txtRecherche.Text.Trim(), "Affichez_Place", "Numero_place");
+        }
+
+        private void dgvPlace_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvPlace.Rows[e.RowIndex];
+
+            txtIdPlace.Text = row.Cells["Numero"].Value.ToString(); // ID
+            cmbCatPlace.Text = row.Cells["Categorie"].Value.ToString();
+            txtNumPlace.Text = row.Cells["Numero_place"].Value.ToString();
+            cmbSallePlace.Text = row.Cells["Salle"].Value.ToString();
 
             txtIdPlace.Visible = true;
             id.Visible = true;

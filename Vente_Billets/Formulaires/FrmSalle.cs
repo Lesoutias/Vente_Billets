@@ -85,5 +85,10 @@ namespace Vente_Billets.Formulaires
             txtIdSalle.Visible = true;
             lblId.Visible = true;
         }
+
+        private void txtRecherche_TextChanged(object sender, EventArgs e)
+        {
+            dgvSalle.DataSource = ClsDict.Instance.Rechercher(txtRecherche.Text.Trim(), "tSalle", "nomSalle");
+        }
     }
 }

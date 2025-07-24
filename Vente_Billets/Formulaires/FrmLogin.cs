@@ -38,7 +38,7 @@ namespace Vente_Billets.Formulaires
                     {
                         FrmDashboard frm = new FrmDashboard();
                         frm.Show();
-                        this.Hide();
+                        
                     }
 
                     else if (ClsDict.Instance.GetRole(login, pwd) == "Vendeur")
@@ -51,7 +51,7 @@ namespace Vente_Billets.Formulaires
                         frm.guna2Button5.Enabled = false;
                         frm.guna2Button6.Enabled = false;
                         frm.guna2Button9.Enabled = false;
-                        this.Hide();
+                        
                     }
                     else if (ClsDict.Instance.GetRole(login, pwd) == "Compable")
                     {
@@ -73,7 +73,7 @@ namespace Vente_Billets.Formulaires
                 }
                 else
                 {
-                    MessageBox.Show("Nom d'utilisateur ou mot de passe incorrect", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Les champs sont vides", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             

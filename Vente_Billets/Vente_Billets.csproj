@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -87,6 +90,12 @@
     </Compile>
     <Compile Include="Rapports\Billet.Designer.cs">
       <DependentUpon>Billet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rapports\DashBoard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rapports\DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Rapports\Facture.cs">
       <SubType>Component</SubType>
@@ -170,6 +179,9 @@
     </Compile>
     <EmbeddedResource Include="Rapports\Billet.resx">
       <DependentUpon>Billet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rapports\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rapports\Facture.resx">
       <DependentUpon>Facture.cs</DependentUpon>
@@ -267,6 +279,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

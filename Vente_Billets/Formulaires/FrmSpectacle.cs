@@ -73,14 +73,29 @@ namespace Vente_Billets.Formulaires
 
         private void dgvSpectacle_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void dgvAgents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtRecherche_TextChanged(object sender, EventArgs e)
+        {
+            dgvSpectacle.DataSource = ClsDict.Instance.Rechercher(txtRecherche.Text.Trim(), "Affichez_Spectacle", "titre");
+        }
+
+        private void dgvSpectacle_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             DataGridViewRow row = dgvSpectacle.Rows[e.RowIndex];
 
-            txtIdSpectacle.Text = row.Cells["id"].Value.ToString(); // ID
-            DateSpectacle.Text = row.Cells["dateSpectacle"].Value.ToString();
-            txtNbrBillet.Text = row.Cells["nombreBillet"].Value.ToString();
-            txtDuree.Text = row.Cells["duree"].Value.ToString();
-            txtDescSpect.Text = row.Cells["descriptionSpectacle"].Value.ToString();
-            cmbSpectacle.SelectedValue = row.Cells["refSalle"].Value;
+            txtIdSpectacle.Text = row.Cells["Numero"].Value.ToString(); // ID
+            DateSpectacle.Text = row.Cells["Date du Spectacle"].Value.ToString();
+            txtNbrBillet.Text = row.Cells["Nombre Total Billet"].Value.ToString();
+            txtDuree.Text = row.Cells["Duree du Spectacle en h"].Value.ToString();
+            txtDescSpect.Text = row.Cells["Description"].Value.ToString();
+            cmbSpectacle.Text = row.Cells["Salle"].Value.ToString();
             txtTitre.Text = row.Cells["titre"].Value.ToString();
 
             txtIdSpectacle.Visible = true;

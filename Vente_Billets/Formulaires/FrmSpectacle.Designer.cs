@@ -29,13 +29,8 @@ namespace Vente_Billets.Formulaires
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtIdSpectacle = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblId = new System.Windows.Forms.Label();
-            this.dgvSpectacle = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmbSpectacle = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtDuree = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,8 +48,10 @@ namespace Vente_Billets.Formulaires
             this.BtnAjouterAgent = new Guna.UI2.WinForms.Guna2Button();
             this.DateSpectacle = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSpectacle)).BeginInit();
+            this.dgvSpectacle = new System.Windows.Forms.DataGridView();
+            this.txtRecherche = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSpectacle)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIdSpectacle
@@ -68,84 +65,22 @@ namespace Vente_Billets.Formulaires
             this.txtIdSpectacle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdSpectacle.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdSpectacle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdSpectacle.Location = new System.Drawing.Point(67, 176);
+            this.txtIdSpectacle.Location = new System.Drawing.Point(100, 351);
+            this.txtIdSpectacle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdSpectacle.Name = "txtIdSpectacle";
             this.txtIdSpectacle.PlaceholderText = "";
             this.txtIdSpectacle.SelectedText = "";
-            this.txtIdSpectacle.Size = new System.Drawing.Size(178, 25);
+            this.txtIdSpectacle.Size = new System.Drawing.Size(267, 38);
             this.txtIdSpectacle.TabIndex = 76;
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(6, 189);
-            this.lblId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblId.Location = new System.Drawing.Point(9, 371);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(15, 13);
+            this.lblId.Size = new System.Drawing.Size(21, 20);
             this.lblId.TabIndex = 75;
             this.lblId.Text = "id";
-            // 
-            // dgvSpectacle
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dgvSpectacle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSpectacle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvSpectacle.ColumnHeadersHeight = 4;
-            this.dgvSpectacle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSpectacle.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvSpectacle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSpectacle.Location = new System.Drawing.Point(66, 221);
-            this.dgvSpectacle.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvSpectacle.Name = "dgvSpectacle";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSpectacle.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvSpectacle.RowHeadersVisible = false;
-            this.dgvSpectacle.RowHeadersWidth = 62;
-            this.dgvSpectacle.RowTemplate.Height = 28;
-            this.dgvSpectacle.Size = new System.Drawing.Size(739, 148);
-            this.dgvSpectacle.TabIndex = 74;
-            this.dgvSpectacle.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvSpectacle.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvSpectacle.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvSpectacle.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvSpectacle.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvSpectacle.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvSpectacle.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSpectacle.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvSpectacle.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvSpectacle.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvSpectacle.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvSpectacle.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvSpectacle.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvSpectacle.ThemeStyle.ReadOnly = false;
-            this.dgvSpectacle.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvSpectacle.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvSpectacle.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvSpectacle.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvSpectacle.ThemeStyle.RowsStyle.Height = 28;
-            this.dgvSpectacle.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvSpectacle.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvSpectacle.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSpectacle_CellClick);
             // 
             // cmbSpectacle
             // 
@@ -157,19 +92,17 @@ namespace Vente_Billets.Formulaires
             this.cmbSpectacle.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbSpectacle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbSpectacle.ItemHeight = 30;
-            this.cmbSpectacle.Location = new System.Drawing.Point(353, 165);
-            this.cmbSpectacle.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbSpectacle.Location = new System.Drawing.Point(689, 351);
             this.cmbSpectacle.Name = "cmbSpectacle";
-            this.cmbSpectacle.Size = new System.Drawing.Size(168, 36);
+            this.cmbSpectacle.Size = new System.Drawing.Size(250, 36);
             this.cmbSpectacle.TabIndex = 73;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(273, 176);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(569, 368);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 13);
+            this.label11.Size = new System.Drawing.Size(44, 20);
             this.label11.TabIndex = 72;
             this.label11.Text = "Salle";
             // 
@@ -184,30 +117,29 @@ namespace Vente_Billets.Formulaires
             this.txtDuree.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDuree.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDuree.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDuree.Location = new System.Drawing.Point(354, 132);
+            this.txtDuree.Location = new System.Drawing.Point(693, 246);
+            this.txtDuree.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDuree.Name = "txtDuree";
             this.txtDuree.PlaceholderText = "";
             this.txtDuree.SelectedText = "";
-            this.txtDuree.Size = new System.Drawing.Size(167, 25);
+            this.txtDuree.Size = new System.Drawing.Size(250, 38);
             this.txtDuree.TabIndex = 71;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(273, 144);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(572, 265);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 13);
+            this.label12.Size = new System.Drawing.Size(53, 20);
             this.label12.TabIndex = 70;
             this.label12.Text = "Duree";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 145);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(12, 267);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 13);
+            this.label13.Size = new System.Drawing.Size(44, 20);
             this.label13.TabIndex = 68;
             this.label13.Text = "Date";
             // 
@@ -222,20 +154,20 @@ namespace Vente_Billets.Formulaires
             this.txtDescSpect.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescSpect.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDescSpect.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescSpect.Location = new System.Drawing.Point(625, 98);
+            this.txtDescSpect.Location = new System.Drawing.Point(1244, 193);
+            this.txtDescSpect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescSpect.Name = "txtDescSpect";
             this.txtDescSpect.PlaceholderText = "";
             this.txtDescSpect.SelectedText = "";
-            this.txtDescSpect.Size = new System.Drawing.Size(224, 104);
+            this.txtDescSpect.Size = new System.Drawing.Size(336, 160);
             this.txtDescSpect.TabIndex = 67;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(560, 144);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(1146, 264);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.Size = new System.Drawing.Size(89, 20);
             this.label10.TabIndex = 66;
             this.label10.Text = "Description";
             // 
@@ -250,20 +182,20 @@ namespace Vente_Billets.Formulaires
             this.txtNbrBillet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNbrBillet.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNbrBillet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNbrBillet.Location = new System.Drawing.Point(354, 97);
+            this.txtNbrBillet.Location = new System.Drawing.Point(690, 148);
+            this.txtNbrBillet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNbrBillet.Name = "txtNbrBillet";
             this.txtNbrBillet.PlaceholderText = "";
             this.txtNbrBillet.SelectedText = "";
-            this.txtNbrBillet.Size = new System.Drawing.Size(167, 25);
+            this.txtNbrBillet.Size = new System.Drawing.Size(250, 38);
             this.txtNbrBillet.TabIndex = 65;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(273, 109);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(569, 167);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.Size = new System.Drawing.Size(114, 20);
             this.label9.TabIndex = 64;
             this.label9.Text = "Nombre_billets";
             // 
@@ -278,20 +210,20 @@ namespace Vente_Billets.Formulaires
             this.txtTitre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTitre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTitre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitre.Location = new System.Drawing.Point(66, 97);
+            this.txtTitre.Location = new System.Drawing.Point(99, 149);
+            this.txtTitre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTitre.Name = "txtTitre";
             this.txtTitre.PlaceholderText = "";
             this.txtTitre.SelectedText = "";
-            this.txtTitre.Size = new System.Drawing.Size(179, 25);
+            this.txtTitre.Size = new System.Drawing.Size(268, 38);
             this.txtTitre.TabIndex = 63;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 110);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(9, 169);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.Size = new System.Drawing.Size(40, 20);
             this.label8.TabIndex = 62;
             this.label8.Text = "Titre";
             // 
@@ -301,10 +233,9 @@ namespace Vente_Billets.Formulaires
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.label7.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(111, 9);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(166, 14);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(620, 47);
+            this.label7.Size = new System.Drawing.Size(906, 70);
             this.label7.TabIndex = 61;
             this.label7.Text = "ENREGISTREMENT DES SPECTACLES";
             // 
@@ -316,10 +247,9 @@ namespace Vente_Billets.Formulaires
             this.BtnDeleteAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BtnDeleteAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnDeleteAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnDeleteAgent.Location = new System.Drawing.Point(577, 391);
-            this.BtnDeleteAgent.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnDeleteAgent.Location = new System.Drawing.Point(846, 972);
             this.BtnDeleteAgent.Name = "BtnDeleteAgent";
-            this.BtnDeleteAgent.Size = new System.Drawing.Size(120, 29);
+            this.BtnDeleteAgent.Size = new System.Drawing.Size(180, 45);
             this.BtnDeleteAgent.TabIndex = 82;
             this.BtnDeleteAgent.Text = "Delete";
             this.BtnDeleteAgent.Click += new System.EventHandler(this.BtnDeleteAgent_Click);
@@ -332,10 +262,9 @@ namespace Vente_Billets.Formulaires
             this.btnUpdateAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUpdateAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdateAgent.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateAgent.Location = new System.Drawing.Point(365, 391);
-            this.btnUpdateAgent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateAgent.Location = new System.Drawing.Point(528, 972);
             this.btnUpdateAgent.Name = "btnUpdateAgent";
-            this.btnUpdateAgent.Size = new System.Drawing.Size(120, 29);
+            this.btnUpdateAgent.Size = new System.Drawing.Size(180, 45);
             this.btnUpdateAgent.TabIndex = 81;
             this.btnUpdateAgent.Text = "Update";
             this.btnUpdateAgent.Click += new System.EventHandler(this.btnUpdateAgent_Click);
@@ -348,10 +277,9 @@ namespace Vente_Billets.Formulaires
             this.BtnAjouterAgent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BtnAjouterAgent.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnAjouterAgent.ForeColor = System.Drawing.Color.White;
-            this.BtnAjouterAgent.Location = new System.Drawing.Point(159, 391);
-            this.BtnAjouterAgent.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAjouterAgent.Location = new System.Drawing.Point(220, 972);
             this.BtnAjouterAgent.Name = "BtnAjouterAgent";
-            this.BtnAjouterAgent.Size = new System.Drawing.Size(120, 29);
+            this.BtnAjouterAgent.Size = new System.Drawing.Size(180, 45);
             this.BtnAjouterAgent.TabIndex = 80;
             this.BtnAjouterAgent.Text = "Ajouter";
             this.BtnAjouterAgent.Click += new System.EventHandler(this.BtnAjouterAgent_Click);
@@ -363,11 +291,12 @@ namespace Vente_Billets.Formulaires
             this.DateSpectacle.FillColor = System.Drawing.Color.White;
             this.DateSpectacle.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DateSpectacle.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DateSpectacle.Location = new System.Drawing.Point(66, 132);
+            this.DateSpectacle.Location = new System.Drawing.Point(102, 247);
+            this.DateSpectacle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DateSpectacle.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DateSpectacle.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DateSpectacle.Name = "DateSpectacle";
-            this.DateSpectacle.Size = new System.Drawing.Size(179, 26);
+            this.DateSpectacle.Size = new System.Drawing.Size(268, 40);
             this.DateSpectacle.TabIndex = 83;
             this.DateSpectacle.Value = new System.DateTime(2025, 7, 21, 4, 51, 15, 315);
             // 
@@ -375,19 +304,59 @@ namespace Vente_Billets.Formulaires
             // 
             this.guna2PictureBox1.Image = global::Vente_Billets.Properties.Resources.spect2;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(864, 75);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1239, 525);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(282, 314);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(413, 439);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 86;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // dgvSpectacle
+            // 
+            this.dgvSpectacle.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSpectacle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSpectacle.GridColor = System.Drawing.Color.White;
+            this.dgvSpectacle.Location = new System.Drawing.Point(57, 525);
+            this.dgvSpectacle.Name = "dgvSpectacle";
+            this.dgvSpectacle.RowHeadersWidth = 62;
+            this.dgvSpectacle.RowTemplate.Height = 28;
+            this.dgvSpectacle.Size = new System.Drawing.Size(1140, 412);
+            this.dgvSpectacle.TabIndex = 87;
+            this.dgvSpectacle.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSpectacle_CellClick_1);
+            this.dgvSpectacle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgents_CellContentClick);
+            // 
+            // txtRecherche
+            // 
+            this.txtRecherche.BorderRadius = 20;
+            this.txtRecherche.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRecherche.DefaultText = "";
+            this.txtRecherche.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRecherche.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRecherche.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRecherche.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRecherche.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRecherche.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecherche.ForeColor = System.Drawing.Color.Black;
+            this.txtRecherche.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRecherche.Location = new System.Drawing.Point(57, 457);
+            this.txtRecherche.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtRecherche.Name = "txtRecherche";
+            this.txtRecherche.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtRecherche.PlaceholderText = "Recherche";
+            this.txtRecherche.SelectedText = "";
+            this.txtRecherche.Size = new System.Drawing.Size(462, 45);
+            this.txtRecherche.TabIndex = 88;
+            this.txtRecherche.TextChanged += new System.EventHandler(this.txtRecherche_TextChanged);
+            // 
             // FrmSpectacle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1158, 434);
+            this.ClientSize = new System.Drawing.Size(1737, 1050);
+            this.Controls.Add(this.txtRecherche);
+            this.Controls.Add(this.dgvSpectacle);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.DateSpectacle);
             this.Controls.Add(this.BtnDeleteAgent);
@@ -395,7 +364,6 @@ namespace Vente_Billets.Formulaires
             this.Controls.Add(this.BtnAjouterAgent);
             this.Controls.Add(this.txtIdSpectacle);
             this.Controls.Add(this.lblId);
-            this.Controls.Add(this.dgvSpectacle);
             this.Controls.Add(this.cmbSpectacle);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtDuree);
@@ -408,11 +376,12 @@ namespace Vente_Billets.Formulaires
             this.Controls.Add(this.txtTitre);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmSpectacle";
             this.Text = "FrmSpectacle";
             this.Load += new System.EventHandler(this.FrmSpectacle_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSpectacle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSpectacle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,7 +391,6 @@ namespace Vente_Billets.Formulaires
 
         private Guna.UI2.WinForms.Guna2TextBox txtIdSpectacle;
         private System.Windows.Forms.Label lblId;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvSpectacle;
         private Guna.UI2.WinForms.Guna2ComboBox cmbSpectacle;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2TextBox txtDuree;
@@ -440,5 +408,7 @@ namespace Vente_Billets.Formulaires
         private Guna.UI2.WinForms.Guna2Button BtnAjouterAgent;
         private Guna.UI2.WinForms.Guna2DateTimePicker DateSpectacle;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.DataGridView dgvSpectacle;
+        private Guna.UI2.WinForms.Guna2TextBox txtRecherche;
     }
 }
